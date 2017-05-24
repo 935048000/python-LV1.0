@@ -13,7 +13,7 @@ print a
 print
 
 import os
-files = os.listdir('../mini_program')
+files = os.listdir('../Python_Cook_Book')
 if any(name.endswith('.py') for name in files):
     print('There be python!')
 else:
