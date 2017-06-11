@@ -1,0 +1,22 @@
+S'Some Python object'
+p0
+.(lp0
+I1
+aI2
+aI3
+aI4
+a.S'hello'
+p0
+.c__builtin__
+set
+p0
+((lp1
+S'Pear'
+p2
+aS'Apple'
+p3
+aS'Banana'
+p4
+atp5
+Rp6
+.

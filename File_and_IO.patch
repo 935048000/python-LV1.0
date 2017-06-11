@@ -1,0 +1,1100 @@
+Index: Python_Cook_Book/5.File_and_IO/countdown.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/countdown.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/countdown.py	(revision )
+@@ -0,0 +1,58 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++不能被序列化:依赖外部系统状态的对象，比如打开的文件，网络连接，线程，进程，栈帧等等。
++用户自定义类可以通过提供 getstate () 和 setstate () 方法来绕过这些限制。
++如果定义了这两个方法，pickle.dump() 就会调用 getstate () 获取序列化的对象。
++类似的， setstate ()在反序列化时被调用。
++为了演示这个工作原理，下面是一个在内部定义了一个线程但仍然可以序列化和反序列化的类：
++'''
++
++
++import time
++import threading
++class Countdown:
++    def __init__(self, n):
++        self.n = n
++        self.thr = threading.Thread(target=self.run)
++        self.thr.daemon = True
++        self.thr.start()
++
++    def run(self):
++        while self.n > 0:
++            print('T-minus', self.n)
++            self.n -= 1
++            time.sleep(2)
++
++    def __getstate__(self):
++        return self.n
++
++    def __setstate__(self, n):
++        self.__init__(n)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/read_write_bety_data.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/read_write_bety_data.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/read_write_bety_data.py	(revision )
+@@ -0,0 +1,56 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++ 读写字节数据
++写二进制文件，比如图片，声音文件等等
++'''
++
++
++# Read the entire file as a single byte string
++with open('somefile.bin', 'rb') as f:
++data = f.read()
++# Write binary data to a file
++with open('somefile.bin', 'wb') as f:
++f.write(b'Hello World')
++
++b = b'Hello World'
++print b[0]
++#output 72
++
++
++with open('somefile.bin', 'rb') as f:
++    data = f.read(16)
++    text = data.decode('utf-8')
++
++with open('somefile.bin', 'wb') as f:
++    text = 'Hello World'
++    f.write(text.encode('utf-8'))
++
++import array
++nums = array.array('i', [1, 2, 3, 4])
++with open('data.bin','wb') as f:
++    f.write(nums)
++
++
++import array
++a = array.array('i', [0, 0, 0, 0, 0, 0, 0, 0])
++with open('data.bin', 'rb') as f:
++    f.readinto(a)
++print a
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/与串行端口的数据通信.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/与串行端口的数据通信.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/与串行端口的数据通信.py	(revision )
+@@ -0,0 +1,45 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++与串行端口的数据通信
++通过串行端口读写数据，典型场景就是和一些硬件设备打交道
++'''
++
++
++import serial
++
++# Device name varies
++ser = serial.Serial('/dev/tty.usbmodem641',
++                    baudrate=9600,
++                    bytesize=8,
++                    parity='N',
++                    stopbits=1)
++
++ser.write(b'G1 X50 Y50\r\n')
++resp = ser.readline()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/testfile.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/testfile.txt	(revision )
++++ Python_Cook_Book/5.File_and_IO/testfile.txt	(revision )
+@@ -0,0 +1,18 @@
++test data
++
++
++test data
++
++
++test data
++
++
++test data
++test data
++test data
++test data
++
++
++test data
++
++
+Index: Python_Cook_Book/5.File_and_IO/character_string_IO.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/character_string_IO.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/character_string_IO.py	(revision )
+@@ -0,0 +1,40 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++字符串的 I/O 操作
++使用操作类文件对象的程序来操作文本或二进制字符串
++使用 io.StringIO() 和 io.BytesIO() 类来创建类文件对象操作字符串数据。
++io.StringIO 只能用于文本。如果你要操作二进制数据，要使用 io.BytesIO 类来代替。
++'''
++
++s = io.StringIO()
++s.write('Hello World\n')
++print('This is a test', file=s)
++
++s.getvalue()
++
++s = io.StringIO('Hello\nWorld\n')
++print s.read(4)
++print s.read()
++
++
++s = io.BytesIO()
++s.write(b'binary data')
++s.getvalue()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/test_file_exist.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/test_file_exist.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/test_file_exist.py	(revision )
+@@ -0,0 +1,41 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++测试文件是否存在
++测试一个文件或目录是否存在。
++测试一个文件或目录是否存在。
++注意权限问题
++'''
++
++import os
++
++print os.path.exists('/etc/passwd')
++print os.path.exists('/tmp/spam')
++
++
++print  os.path.isfile('/etc/passwd')
++print os.path.isdir('/etc/passwd')
++print  os.path.islink('/usr/local/bin/python3')
++print os.path.realpath('/usr/local/bin/python3')
++
++
++print os.path.getsize('/etc/passwd')
++print os.path.getmtime('/etc/passwd')
++
++import time
++print time.ctime(os.path.getmtime('/etc/passwd'))
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/memory_to_byte_file.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/memory_to_byte_file.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/memory_to_byte_file.py	(revision )
+@@ -0,0 +1,50 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++ 内存映射的二进制文件
++内存映射一个二进制文件到一个可变字节数组中，目的可能是为了随机访问它的内容或者是原地做些修改。
++ mmap 模块来内存映射文件
++'''
++
++import os
++import mmap
++def memory_map(filename, access=mmap.ACCESS_WRITE):
++    size = os.path.getsize(filename)
++    fd = os.open(filename, os.O_RDWR)
++    return mmap.mmap(fd, size, access=access)
++
++size = 1000000
++
++with open('data', 'wb') as f:
++    f.seek(size-1)
++    f.write(b'\x00')
++f.close
++
++m = memory_map('data')
++print len(m)
++print m[0:10]
++print m[0]
++
++m[0:11] = b'Hello World'
++
++
++with open('data', 'rb') as f:
++    print(f.read(11))
++
++with memory_map('data') as m:
++    print(len(m))
++    print(m[0:10])
++m.close()
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/改变已打开文件的编码.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/改变已打开文件的编码.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/改变已打开文件的编码.py	(revision )
+@@ -0,0 +1,45 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++增加或改变已打开文件的编码
++在不关闭一个已打开的文件前提下增加或改变它的 Unicode 编码
++给一个以二进制模式打开的文件添加 Unicode 编码/解码方式，可以使用io.TextIOWrapper() 对象包装它。
++'''
++
++
++import urllib.request
++import io
++u = urllib.request.urlopen('http://www.python.org')
++f = io.TextIOWrapper(u, encoding='utf-8')
++text = f.read()
++
++
++#在sys.stdout 上修改编码方式的例子
++import sys
++print sys.stdout.encoding
++sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='latin-1')
++print sys.stdout.encoding
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/分隔符or行终止符.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/分隔符or行终止符.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/分隔符or行终止符.py	(revision )
+@@ -0,0 +1,39 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++ 使用其他分隔符或行终止符打印
++使用 print() 函数输出数据，但是想改变默认的分隔符或者行尾符
++在 print() 函数中使用 sep 和 end 关键字参数
++'''
++
++
++print 'ACME', 50, 91.5
++print 1
++print('ACME', 50, 91.5, sep=',')
++print 1
++print('ACME', 50, 91.5, sep=',', end = '!!\n')
++
++for i in range(5):
++    print(i, end=' ')
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/序列化Python对象.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/序列化Python对象.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/序列化Python对象.py	(revision )
+@@ -0,0 +1,66 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++需要将一个 Python 对象序列化为一个字节流
++以便将它保存到一个文件、存储到数据库或者通过网络传输它。
++序列化最普遍的做法就是使用 pickle 模块
++
++pickle 在加载时有一个副作用就是它会自动加载相应模块并构造实例对象。
++但是坏人他就可以创建一个恶意的数据导致 Python 执行随意指定的系统命令。
++因此，一定要保证 pickle 只在相互之间可以认证对方的解析器的内部使用。
++
++'''
++
++
++import pickle
++data = 'Some Python object'
++f = open('somefile', 'wb')
++pickle.dump(data, f)
++s = pickle.dumps(data)
++pickle.dump([1, 2, 3, 4], f)
++pickle.dump('hello', f)
++pickle.dump({'Apple', 'Pear', 'Banana'}, f)
++
++f.close()
++
++#从文件中恢复
++f = open('somefile', 'rb')
++dataf = pickle.load(f)
++print dataf
++dataf = pickle.load(f)
++print dataf
++dataf = pickle.load(f)
++print dataf
++
++#从string中恢复
++datas = pickle.loads(s)
++print datas
++
++import math
++print pickle.dumps(math.cos)
++print
++
++import time
++import countdown
++c = countdown.Countdown(30)
++
++time.sleep(6)
++print
++f = open('cstate.p', 'wb')
++pickle.dump(c, f)
++f.close()
++print
++f = open('cstate.p', 'rb')
++pickle.load(f)
++time.sleep(6)
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/read_byte_data_to_buffer.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/read_byte_data_to_buffer.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/read_byte_data_to_buffer.py	(revision )
+@@ -0,0 +1,45 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++读取二进制数据到可变缓冲区中
++直接读取二进制数据到一个可变缓冲区中，而不需要做任何的中间复制操作。
++原地修改数据并将它写回到一个文件中去
++读取数据到一个可变数组中，使用文件对象的 readinto() 方法
++'''
++
++import os.path
++
++def read_into_buffer(filename):
++    buf = bytearray(os.path.getsize(filename))
++    with open(filename, 'rb') as f:
++        f.readinto(buf)
++    return buf
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/read_write_file.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/read_write_file.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/read_write_file.py	(revision )
+@@ -0,0 +1,57 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++读写文本数据
++读写各种不同编码的文本数据，比如 ASCII，UTF-8 或 UTF-16 编码等
++"r"   以读方式打开，只能读文件 ， 如果文件不存在，会发生异常      
++"w" 以写方式打开，只能写文件， 如果文件不存在，创建该文件,如果文件已存在，先清空，再打开文件
++"rb"   以二进制读方式打开，只能读文件 ， 如果文件不存在，会发生异常      
++"wb" 以二进制写方式打开，只能写文件， 如果文件不存在，创建该文件,如果文件已存在，先清空，再打开文件
++"rt"   以文本读方式打开，只能读文件 ， 如果文件不存在，会发生异常      
++"wt" 以文本写方式打开，只能写文件， 如果文件不存在，创建该文件,如果文件已存在，先清空，再打开文件
++"rb+"   以二进制读方式打开，可以读、写文件 ， 如果文件不存在，会发生异常      
++"wb+" 以二进制写方式打开，可以读、写文件， 如果文件不存在，创建该文件,如果文件已存在，先清空，再打开文件
++'''
++
++with open('testfile.txt', 'rt') as f:
++    data = f.read()
++    print data
++f.close()
++
++with open('testfile.txt', 'rt') as f:
++    for line in f:
++        print line
++f.close()
++
++with open('testfile.txt', 'aw+') as f:
++    f.write('hello')
++    f.write('\n')
++f.close()
++
++
++# with open('testfile.txt', 'at') as f:
++#     print(line1, file=f)
++#     print(line2, file=f)
++# f.close()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/file_none_can_write.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/file_none_can_write.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/file_none_can_write.py	(revision )
+@@ -0,0 +1,44 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++文件不存在才能写入
++一个文件中写入数据，但是前提必须是这个文件在文件系统上不存在。
++不允许覆盖已存在的文件内容。
++'''
++
++with open('somefile', 'wt') as f:
++    f.write('Hello\n')
++
++#mode: x --> w
++
++with open('somefile', 'xt') as f:
++    f.write('Hello\n')
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/固定大小记录的文件迭代.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/固定大小记录的文件迭代.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/固定大小记录的文件迭代.py	(revision )
+@@ -0,0 +1,45 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++固定大小记录的文件迭代
++在一个固定长度记录或者数据块的集合上迭代，而不是在一个文件中一行一行的迭代。
++
++iter() 函数有一个鲜为人知的特性就是，如果你给它传递一个可调用对象和一个
++标记值，它会创建一个迭代器。这个迭代器会一直调用传入的可调用对象直到它返回
++标记值为止，这时候迭代终止。
++'''
++
++# records 对象是一个可迭代对象
++from functools import partial
++RECORD_SIZE = 32
++with open('somefile.data', 'rb') as f:
++    records = iter(partial(f.read, RECORD_SIZE), b'')
++    for r in records:
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/print_output_to_file.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/print_output_to_file.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/print_output_to_file.py	(revision )
+@@ -0,0 +1,53 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++打印输出至文件中
++将 print() 函数的输出重定向到一个文件中去
++在 print() 函数中指定 file 关键字参数
++
++sys.stdout = file:将标准输出管道连到打开的文件
++sys.stdout.close():关闭管道，所以，使用print 输出的数据，本来是存放在管道中，close()之后，全部写入文件中。
++sys.stdout = temp:重新连接到标准的输出
++'''
++import sys
++
++
++temp=sys.stdout
++f=open('testfile.txt','a+')
++data=f.read()
++print data
++sys.stdout = f
++print "test data"
++print '\n'
++sys.stdout=temp
++#sys.stdout.flush()
++sys.stdout.close()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/get_dir_file_list.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/get_dir_file_list.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/get_dir_file_list.py	(revision )
+@@ -0,0 +1,57 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++获取文件夹中的文件列表
++获取文件系统中某个目录下的所有文件列表。
++ os.listdir() 函数来获取某个目录中的文件列表
++'''
++
++import os
++names = os.listdir('/tmp')
++print names
++
++names = [name for name in os.listdir('/tmp')
++if os.path.isfile(os.path.join('/tmp', name))]
++print 'file',names
++
++dirnames = [name for name in os.listdir('/tmp')
++if os.path.isdir(os.path.join('/tmp', name))]
++print 'dir',dirnames
++
++pyfiles = [name for name in os.listdir('/tmp')
++if name.endswith('.py')]
++print 'pythons',pyfiles
++
++
++import glob
++pyfiless = glob.glob('/tmp/*.py')
++print 'pythonss',pyfiles
++
++from fnmatch import fnmatch
++pyfilesss = [name for name in os.listdir('/tmp')
++            if fnmatch(name, '*.py')]
++print 'pythonsss',pyfiles
++print
++
++# 忽略文件名编码
++#使用原始文件名执行文件的 I/O 操作，文件名并没有经过系统默认编码去解码或编码过。
++import sys
++codings = sys.getfilesystemencoding()
++print codings
++print
++
++with open('jalape\xf1o.txt', 'w') as f:
++    f.write('Spicy!')
++f.close()
++
++print os.listdir('.')
++print os.listdir(b'.')
++
++with open(b'jalapen\xcc\x83o.txt') as f:
++    print(f.read())
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/file_name.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/file_name.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/file_name.py	(revision )
+@@ -0,0 +1,38 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++文件路径名的操作
++使用路径名来获取文件名，目录名，绝对路径等等。
++使用 os.path 模块中的函数来操作路径名。
++'''
++
++import os
++path = '/home/ch/Data/data.csv'
++print os.path.basename(path)
++print os.path.dirname(path)
++
++print os.path.join('tmp', 'data', os.path.basename(path))
++
++path = '~/Data/data.csv'
++print os.path.expanduser(path)
++print  os.path.splitext(path)
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/print_Illegal_filename.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/print_Illegal_filename.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/print_Illegal_filename.py	(revision )
+@@ -0,0 +1,43 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++打印不合法的文件名
++取了一个目录中的文件名列表，但是当它试着去打印文件名的时候程序崩溃，出现了 UnicodeEncodeError 异常和一条奇怪的消息
++'''
++
++def bad_filename(filename):
++    return repr(filename)[1:-1]
++
++try:
++        print(filename)
++except UnicodeEncodeError:
++        print(bad_filename(filename))
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/read_write_compress_file.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/read_write_compress_file.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/read_write_compress_file.py	(revision )
+@@ -0,0 +1,51 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++读写一个 gzip 或 bz2 格式的压缩文件。
++gzip 和 bz2 模块可以很容易的处理这些文件。
++'''
++
++
++import gzip
++with gzip.open('somefile.gz', 'rt') as f:
++    text = f.read()
++
++
++import bz2
++with bz2.open('somefile.bz2', 'rt') as f:
++    text = f.read()
++
++
++import gzip
++with gzip.open('somefile.gz', 'wt', compresslevel=5) as f:
++f.write(text)
++
++import bz2
++with bz2.open('somefile.bz2', 'wt', compresslevel=5) as f:
++f.write(text)
++
++
++import gzip
++f = open('somefile.gz', 'rb')
++with gzip.open(f, 'rt') as g:
++    text = g.read()
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: Python_Cook_Book/5.File_and_IO/create_temp_file_and_dir.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Python_Cook_Book/5.File_and_IO/create_temp_file_and_dir.py	(revision )
++++ Python_Cook_Book/5.File_and_IO/create_temp_file_and_dir.py	(revision )
+@@ -0,0 +1,49 @@
++#!/usr/bin/env python
++# coding=utf-8
++
++
++'''
++ 创建临时文件和文件夹
++在程序执行时创建一个临时文件或目录，并希望使用完之后可以自动销毁掉。
++tempfile 模块中有很多的函数可以完成这任务。
++为了创建一个匿名的临时文件，可以使用 tempfile.TemporaryFile 
++'''
++
++
++from tempfile import TemporaryFile
++with TemporaryFile('w+t',encoding='utf-8',errors='ignore') as f:
++    # Read/write to the file
++    f.write('Hello World\n')
++    f.write('Testing\n')
++    # Seek back to beginning and read the data
++    f.seek(0)
++    data = f.read()
++
++
++from tempfile import TemporaryDirectory
++with TemporaryDirectory() as dirname:
++    print('dirname is:', dirname)
++    # Use the directory
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
