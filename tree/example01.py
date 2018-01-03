@@ -61,6 +61,7 @@ class Tree(object):
                     A.append (node.left)
                 if node.right:
                     A.append (node.right)
+        # result.reverse() # 反着
         return result
 
     # 递归实现前序遍历
@@ -84,9 +85,11 @@ class Tree(object):
         ldeepth = self.height(root.left)
         rdeepth = self.height(root.right)
         return max(ldeepth+1, rdeepth+1)
+
     # 求得二叉树的最大深度
     def deepth(self, root):
         return self.height(root)-1
+
     # 递归实现后序遍历
     def houxuDG(self, root):
         if root:
@@ -129,6 +132,24 @@ class Tree(object):
                     temp = stack.pop()
                     print(temp.data)
                     current = temp.right
+
+    # 二叉树的中序非递归实现
+    def zhongxuIterator(self,root):
+        result = []
+        if root is None:
+            return
+        else:
+            stack = []
+            current = root
+            while len (stack) != 0 or current:
+                if current:
+                    stack.append (current)
+                    current = current.left
+                else:
+                    temp = stack.pop ()
+                    current = temp.right
+                    yield temp.data
+
 
     # 二叉树的后序非递归实现
     def houxu(self):
@@ -187,6 +208,29 @@ class Tree(object):
 
             return self.maxwidth
 
+    # 翻转(镜像)二叉树
+    def invertTree(self,root):
+        if root is None:
+            return
+        root.left, root.right = root.right, root.left
+        self.invertTree (root.right)
+        self.invertTree (root.left)
+        return root
+
+    # 比较二叉树是否完全一样
+    def isIdentical(self, a, b):
+        if a == None and b == None:
+            return True
+        if a == None or b == None:
+            return False
+
+        if a.val != b.val:
+            return False
+
+        return self.isIdentical (a.left, b.left) and self.isIdentical (a.right, b.right)
+
+
+
 
 if __name__ == '__main__':
     # 手动创建一课二叉树
@@ -210,6 +254,8 @@ if __name__ == '__main__':
     # print(tree.root.left.left.data)
     # print(tree.root.left.right.data)
     # 调用方法打印一下效果：以层次遍历实现
+    # print('翻转二叉树（镜像）')
+    # tree.invertTree(tree.root)
     print('调用方法打印一下效果：以层次遍历实现')
     print(tree.print())
     # print('前序遍历递归实现')
@@ -232,7 +278,9 @@ if __name__ == '__main__':
     # tree.xianxu()
     # print('中序非递归遍历测试')
     # tree.zhongxu()
+    # print ('中序非递归 迭代器 遍历测试')
+    # print (next (tree.zhongxuIterator(tree.root)))
     # print('后序非递归遍历测试')
     # tree.houxu()
     # print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
-    print('二叉树的节点数目为： {}'.format(tree.getsize()))
+    # print('二叉树的节点数目为： {}'.format(tree.getsize()))
