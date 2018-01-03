@@ -12,21 +12,25 @@ l[x+1]-l[x] + l[x+2]-l[x+1] … l[y+1]-l[y] = l[y+1]-l[x]
 也就求得原数组两数之差的最大值)
 
 """
-def maxProfit1(l):
-    length=len(l)
-    #求出前一天与后一天的差值
-    diff=[]
-    for i in range(length-1):
-        diff.append(l[i+1]-l[i])
-    max_sum=0
-    cur_sum=0
-    for d in diff:
-        if cur_sum+d>0:
-            cur_sum+=d
+
+
+def maxProfit1(list):
+    # 算出利益比变化列表
+    NEW=[]
+    for i in range(len(list)-1):
+        NEW.append(list[i+1]-list[i])
+    # 初始化
+    imax = 0
+    temp = 0
+    # 最大子数组和计算方式
+    for d in NEW:
+        if temp + d > 0:
+            temp += d
         else:
-            cur_sum=0
-        max_sum = max(cur_sum,max_sum)
-    return max_sum
+            temp = 0
+        # 获取当前最大子数组
+        imax = max(temp,imax)
+    return imax
 
 
 
@@ -38,34 +42,22 @@ def maxProfit1(l):
 买卖次数无限，所以只要能获利就进行买卖，这样能保证所有利润都吃到自然利润最大。
 """
 def maxProfit2(prices):
-    max = 0
+    max_profit = 0
     for i in range(1,len(prices)):
         d = prices[i] - prices[i-1]
+        # 值为正即存在利益
         if d > 0 :
-            max += d
-
-    return max
-
+            max_profit += d
+    return max_profit
 
 
-
-# public int maxProfit(int[] prices) {
-#     int hold1 = Integer.MIN_VALUE, hold2 = Integer.MIN_VALUE;
-#     int release1 = 0, release2 = 0;
-#     for(int i:prices){                              // Assume we only have 0 money at first
-#         release2 = Math.max(release2, hold2+i);     // The maximum if we've just sold 2nd stock so far.
-#         hold2    = Math.max(hold2,    release1-i);  // The maximum if we've just buy  2nd stock so far.
-#         release1 = Math.max(release1, hold1+i);     // The maximum if we've just sold 1nd stock so far.
-#         hold1    = Math.max(hold1,    -i);          // The maximum if we've just buy  1st stock so far.
-#     }
-#     return release2; ///Since release1 is initiated as 0, so release2 will always higher than release1.
-# }
 """
 假设你有一个数组，其中第i 个元素是第i天给定股票的价格。
 设计一个算法来找到最大的利润。您最多可以完成两笔交易。
 您不可以同时进行多笔交易（即您必须在再次购买之前出售股票）。
 """
-def maxProfit3(prices):
+
+def maxProfit_3_1(prices):
     release1 = -999
     release2 = -999
     hold1 = 0
@@ -77,19 +69,19 @@ def maxProfit3(prices):
         hold1 = max (hold1, -i)
     return release2
 
-def maxProfit31(p):
+def maxProfit_3_2(prices):
     sell = [0]
-    buyd = [0]
-    n = len (p)
-    minp = p[0]
-    maxp = p[-1]
+    buy = [0]
+    plen = len (prices)
+    minp = prices[0]
+    maxp = prices[-1]
 
-    for i in range (1, n):
-        minp, maxp = min (minp, p[i]), max (maxp, p[n - i - 1])
-        sell.append (max (sell[i - 1], p[i] - minp))
-        buyd.append (max (buyd[i - 1], maxp - p[n - i - 1]))
+    for i in range (1, plen):
+        minp, maxp = min (minp, prices[i]), max (maxp, prices[plen - i - 1])
+        sell.append (max (sell[i - 1], prices[i] - minp))
+        buy.append (max (buy[i - 1], maxp - prices[plen - i - 1]))
 
-    return max (sell[i] + buyd[n - i - 1] for i in range (n))
+    return max (sell[i] + buy[plen - i - 1] for i in range (plen))
 
 
 """
@@ -97,7 +89,7 @@ def maxProfit31(p):
 设计一个算法来找到最大的利润。你最多可以完成 k 笔交易。
 你不可以同时参与多笔交易(你必须在再次购买前出售掉之前的股票)
 """
-def maxProfit4(k,prices):
+def maxProfit_4(k,prices):
     if not prices: return 0
     n = len (prices)
     if k >= n // 2:
@@ -108,7 +100,6 @@ def maxProfit4(k,prices):
 
     profits = [0] * n
     for j in range (k):
-        # Update new_profits
         max_all = max_prev = max_here = 0
         for i in range (1, n):
             profit = prices[i] - prices[i - 1]
@@ -118,6 +109,34 @@ def maxProfit4(k,prices):
     return profits[-1]
 
 
+"""
+我将这些关键变量命名为本地利润和全局利润，以使事情更容易理解(至少对我来说是这样)。
+"""
+def maxProfit4(self, k, prices):
+    n = len(prices)
+    if n < 2:
+        return 0
+    if k >= n / 2:
+        return sum(i - j
+                   for i, j in zip(prices[1:], prices[:-1]) if i - j > 0)
+    globalMax = [[0] * n for _ in xrange(k + 1)]
+    for i in xrange(1, k + 1):
+        # 最大的利润与我的交易和卖出股票在第j天。
+        localMax = [0] * n
+        for j in xrange(1, n):
+            profit = prices[j] - prices[j - 1]
+            localMax[j] = max(
+                # 我们以(i - 1)的交易获利最多在(j - 1)天
+                # 在最后一次交易中，我们每天买进股票(j - 1)，然后在第j日卖出。
+                globalMax[i - 1][j - 1] + profit,
+                # 在(j - 1)天内，我们以(i - 1)的转换期取得了最大的利润。
+                # 最后一次交易，我们在j日买进股票，在同一天卖出，所以我们有0利润，显然我们不需要加它。
+                globalMax[i - 1][j - 1],  # + 0,
+                # 我们已在(j - 1)天内赢利。
+                # 我们想取消那天(j - 1)的销售，在j日卖出。
+                localMax[j - 1] + profit)
+            globalMax[i][j] = max(globalMax[i][j - 1], localMax[j])
+    return globalMax[k][-1]
 
 
 
