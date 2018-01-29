@@ -256,8 +256,8 @@ if __name__ == '__main__':
     # 调用方法打印一下效果：以层次遍历实现
     # print('翻转二叉树（镜像）')
     # tree.invertTree(tree.root)
-    print('调用方法打印一下效果：以层次遍历实现')
-    print(tree.print())
+    # print('调用方法打印一下效果：以层次遍历实现')
+    # print(tree.print())
     # print('前序遍历递归实现')
     # # 前序遍历递归实现
     # tree.qianxuDG(tree.root)
@@ -282,5 +282,5 @@ if __name__ == '__main__':
     # print (next (tree.zhongxuIterator(tree.root)))
     # print('后序非递归遍历测试')
     # tree.houxu()
-    # print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
-    # print('二叉树的节点数目为： {}'.format(tree.getsize()))
+    print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
+    print('二叉树的节点数目为： {}'.format(tree.getsize()))
