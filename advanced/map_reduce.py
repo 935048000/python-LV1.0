@@ -1,6 +1,6 @@
 #coding=utf-8
 
-
+from functools import reduce
 
 # map()函数接收两个参数，一个是函数，一个是Iterable.
 # map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回。
@@ -17,13 +17,13 @@ def ADD(x,y):
     return x+y
 
 list3 = reduce(ADD,list1)
-print list3
+print (list3)
+
 
 def fn(x,y):
     return x * 10 + y
 list4 = reduce(fn,list1)
-print list4
-
+print (list4)
 
 
 def normalize(name):
@@ -42,25 +42,29 @@ print (L2)
 # 删掉偶数，只保留奇数
 def is_odd(n):
     return n % 2 == 1
-print list(filter(is_odd, list1))
+
+
+print (list (filter (is_odd, list1)))
+
 
 # 空字符串删掉
 def not_empty(s):
     return s and s.strip()
-print list(filter(not_empty, ['A', '', 'B', None, 'C', '  ']))
 
+
+print (list (filter (not_empty, ['A', '', 'B', None, 'C', '  '])))
 
 # sorted()函数就可以对list进行排序
 # sorted()函数也是一个高阶函数，它还可以接收一个key函数来实现自定义的排序
 # key指定的函数将作用于list的每一个元素上，并根据key函数返回的结果进行排序。
 # 反向排序，不必改动key函数，可以传入第三个参数reverse=True
 nlist = [36, 5, -12, 9, -21]
-print  sorted(nlist)
-print  sorted(nlist, key=abs)
+print (sorted (nlist))
+print (sorted (nlist, key=abs))
 
-print sorted(['bob', 'about', 'Zoo', 'Credit'])
-print sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower)
-print sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
+print (sorted (['bob', 'about', 'Zoo', 'Credit']))
+print (sorted (['bob', 'about', 'Zoo', 'Credit'], key=str.lower))
+print (sorted (['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
 
 # 按名字和成绩排序
 L=[('Bob',75),('Adam',92),('Bart',66),('Lisa',88)]
@@ -68,5 +72,7 @@ def byname(L):
     return L[0]
 def byscore(L):
     return L[1]
-print  sorted(L, key=byname)
-print  sorted(L, key=byscore,reverse=True)
+
+
+print (sorted (L, key=byname))
+print (sorted (L, key=byscore, reverse=True))
