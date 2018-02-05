@@ -40,9 +40,6 @@ def mergeSort(unsortedList):
     return sortedList
 
 t1=time.time()
-print t1
-print mergeSort(unsortedList)
-print (time.time() - t1),"s"
-
-
-
+print (t1)
+print (mergeSort (unsortedList))
+print ((time.time () - t1), "s")

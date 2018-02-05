@@ -24,8 +24,8 @@ def print_time(arr):
     def _time_cha(arg):
         t1 = time.time()
         ret = arr(arg)
-        print (time.time() - t1),"s"
-        print ret
+        print ((time.time () - t1), "s")
+        print (ret)
         return ret
     return _time_cha
 
