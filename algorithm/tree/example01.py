@@ -26,7 +26,9 @@ class Tree(object):
         # 索引标识
         self.maxwidth = 0
         self.i = 0
-
+        self.preorderList = []
+        self.inorderList = []
+        self.postorderList = []
 
     # 求二叉树包含的节点数目
     def getsize(self):
@@ -67,19 +69,39 @@ class Tree(object):
     # 递归实现前序遍历
     def qianxuDG(self, root):
         if root:
-            print(root.data)
+            # print(root.data)
+            self.preorderList.append (root.data)
             self.qianxuDG(root.left)
             self.qianxuDG(root.right)
+        # print(self.list)
+        return self.preorderList
 
     # 递归实现中序遍历
     def zhongxuDG(self, root):
         if root:
             self.zhongxuDG(root.left)
-            print(root.data)
+            # print(root.data)
+            self.inorderList.append (root.data)
             self.zhongxuDG(root.right)
+        return self.inorderList
+
+    # 递归实现后序遍历
+    def houxuDG(self, root):
+        if root:
+            self.houxuDG (root.left)
+            self.houxuDG (root.right)
+            # print(root.data)
+            self.postorderList.append (root.data)
+        return self.postorderList
+
 
     # 求得二叉树的最大高度
     def height(self, root):
+        """
+        :param root:
+        :return max hight: int
+        每找到左或右节点就左+1或右+1，取最大的，继续递归
+        """
         if not root:
             return 0
         ldeepth = self.height(root.left)
@@ -90,12 +112,42 @@ class Tree(object):
     def deepth(self, root):
         return self.height(root)-1
 
-    # 递归实现后序遍历
-    def houxuDG(self, root):
-        if root:
-            self.houxuDG(root.left)
-            self.houxuDG(root.right)
-            print(root.data)
+    # 求一颗二叉树的最大宽度
+    def width(self, root):
+        if root is None:
+            return
+        else:
+            # 如果是访问根节点
+            if self.i == 0:
+                # 第一层加一
+                self.n[0] = 1
+                # 到达第二层
+                self.i += 1
+                if root.left:
+                    self.n[self.i] += 1
+                if root.right:
+                    self.n[self.i] += 1
+                    # print('临时数据：', self.n)
+            else:
+                # 访问子树
+                self.i += 1
+                # print('二叉树所在层数：', self.i)
+                if root.left:
+                    self.n[self.i] += 1
+                if root.right:
+                    self.n[self.i] += 1
+            # 开始判断, 取出最大值
+            # maxwidth = max(maxwidth, n[i])
+            # maxwidth.append(max(max(maxwidth), n[i]))
+            self.maxwidth = max (self.maxwidth, self.n[self.i])
+            # 遍历左子树
+            self.width (root.left)
+            # 往上退一层
+            self.i -= 1
+            # 遍历右子树
+            self.width (root.right)
+        
+            return self.maxwidth
 
     # 二叉树的先序遍历非递归实现
     def xianxu(self):
@@ -171,43 +223,6 @@ class Tree(object):
             while stack2:
                 print(stack2.pop().data)
 
-    # 求一颗二叉树的最大宽度
-    def width(self, root):
-        if root is None:
-            return
-        else:
-            # 如果是访问根节点
-            if self.i == 0:
-                # 第一层加一
-                self.n[0] =1
-                # 到达第二层
-                self.i += 1
-                if root.left:
-                    self.n[self.i] += 1
-                if root.right:
-                    self.n[self.i] += 1
-                # print('临时数据：', self.n)
-            else:
-                # 访问子树
-                self.i += 1
-                # print('二叉树所在层数：', self.i)
-                if root.left:
-                    self.n[self.i] += 1
-                if root.right:
-                    self.n[self.i] += 1
-            # 开始判断, 取出最大值
-            # maxwidth = max(maxwidth, n[i])
-            # maxwidth.append(max(max(maxwidth), n[i]))
-            self.maxwidth= max(self.maxwidth, self.n[self.i])
-            # 遍历左子树
-            self.width(root.left)
-            # 往上退一层
-            self.i -= 1
-            # 遍历右子树
-            self.width(root.right)
-
-            return self.maxwidth
-
     # 翻转(镜像)二叉树
     def invertTree(self,root):
         if root is None:
@@ -256,17 +271,13 @@ if __name__ == '__main__':
     # 调用方法打印一下效果：以层次遍历实现
     # print('翻转二叉树（镜像）')
     # tree.invertTree(tree.root)
-    # print('调用方法打印一下效果：以层次遍历实现')
-    # print(tree.print())
-    # print('前序遍历递归实现')
-    # # 前序遍历递归实现
-    # tree.qianxuDG(tree.root)
-    # # 中序遍历递归实现
-    # print('中序遍历递归实现')
-    # tree.zhongxuDG(tree.root)
-    # # 后序遍历递归实现
-    # print('后序遍历递归实现')
-    # tree.houxuDG(tree.root)
+    print ('调用方法打印一下效果：以层次遍历实现')
+    print (tree.print ())
+
+    print ('前序遍历递归实现', tree.qianxuDG (tree.root))
+    print ('中序遍历递归实现', tree.zhongxuDG (tree.root))
+    print ('后序遍历递归实现', tree.houxuDG (tree.root))
+    
     # # 求取二叉树的高度
     # print('求取二叉树的高度')
     # print(tree.height(tree.root))
@@ -282,5 +293,5 @@ if __name__ == '__main__':
     # print (next (tree.zhongxuIterator(tree.root)))
     # print('后序非递归遍历测试')
     # tree.houxu()
-    print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
-    print('二叉树的节点数目为： {}'.format(tree.getsize()))
+    # print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
+    # print('二叉树的节点数目为： {}'.format(tree.getsize()))
