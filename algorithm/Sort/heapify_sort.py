@@ -62,6 +62,6 @@ def heapSort(L):
     return L
 
 t1=time.time()
-print t1
-print heapSort(unsortedList)
-print (time.time() - t1),"s"
+print (t1)
+print (heapSort (unsortedList))
+print ((time.time () - t1), "s")

@@ -19,8 +19,8 @@ def print_time(arr):
     def _time_cha(arg):
         t1 = time.time()
         ret = arr(arg)
-        print (time.time() - t1),"s"
-        print ret
+        print ((time.time () - t1), "s")
+        print (ret)
         return ret
     return _time_cha
 
@@ -30,7 +30,7 @@ unsortedList = []
 def generateUnsortedList(num):
     for i in range(0, num):
         unsortedList.append(random.randint(0, 1000000))
-    print unsortedList
+    print (unsortedList)
 
 generateUnsortedList(10000)
 
@@ -46,12 +46,7 @@ def bubbleSort_1(arr):
     return arr
 
 
-
-
-print bubbleSort_1(unsortedList)
-
-
-
+print (bubbleSort_1 (unsortedList))
 
 '''
 选择排序(正宗冒泡排序)，遍历数组，挑选最小的数，排在前边。
@@ -69,9 +64,8 @@ def bubbleSort_2(arr):
                 arr[i], arr[j] = arr[j], arr[i]
     return arr
 
-print bubbleSort_2(unsortedList)
 
-
+print (bubbleSort_2 (unsortedList))
 
 '''
 冒泡排序优化版，排序排到数组无变化后（排序成功后）中断排序，节约资源。
@@ -90,17 +84,5 @@ def bubbleSort_3(arr):
                 flag=1
     return arr
 
-print bubbleSort_3(unsortedList)
 
-
-
-
-
-
-
-
-
-
-
-
-
+print (bubbleSort_3 (unsortedList))
