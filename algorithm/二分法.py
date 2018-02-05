@@ -17,4 +17,4 @@ def search2(a, m):
 
     return -1
 
-# print(search2([3,4,5,8,8,8,8,10,13,14],8))
+    #  print(search2([3,4,5,8,8,8,8,10,13,14],8))
