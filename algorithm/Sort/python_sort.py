@@ -21,22 +21,9 @@ def generateUnsortedList(num):
 
 generateUnsortedList(10000)
 
-print
+print ()
 t1=time.time()
-print sorted(unsortedList)
-print (time.time() - t1),"s"
-print
-print unsortedList.sort()
-
-
-
-
-
-
-
-
-
-
-
-
-
+print (sorted (unsortedList))
+print ((time.time () - t1), "s")
+print ()
+print (unsortedList.sort ())
