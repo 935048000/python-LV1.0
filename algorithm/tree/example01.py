@@ -149,6 +149,60 @@ class Tree(object):
         
             return self.maxwidth
 
+    # 最大宽度
+    def maxWidth(self, root):
+        self._maxWidth = 0
+        level = [(1, root)]
+        while level:
+            self._maxWidth = max (self._maxWidth, level[-1][0] - level[0][0] + 1)
+            level = [kid
+                     for number, node in level
+                     for kid in enumerate ((node.left, node.right), 2 * number)
+                     if kid[1]]
+        return self._maxWidth
+
+    # 最大宽度
+    def widthOfBinaryTreeBFS(self, root):
+        """
+        给每个节点一个位置值,BFS中，所有具有相同深度的节点都是相邻搜索的，
+        只需要记住每个深度的第一个和最后一个位置。
+        """
+        queue = [(root, 0, 0)]
+        cur_depth = left = ans = 0
+        for node, depth, pos in queue:
+            if node:
+                queue.append ((node.left, depth + 1, pos * 2))
+                queue.append ((node.right, depth + 1, pos * 2 + 1))
+                if cur_depth != depth:
+                    cur_depth = depth
+                    left = pos
+                ans = max (pos - left + 1, ans)
+    
+        return ans
+
+    # 最大宽度
+    def widthOfBinaryTreeDFS(self, root):
+        """
+        创建一个dfs迭代器来产生每个节点的深度和位置。
+        需要知道每个深度，剩下的最左边的位置（深度）和最右边的位置（深度）。遍历节点时最大的宽度。
+        """
+    
+        def dfs(node, depth=0, pos=0):
+            if node:
+                yield depth, pos
+                yield from dfs (node.left, depth + 1, pos * 2)
+                yield from dfs (node.right, depth + 1, pos * 2 + 1)
+    
+        left = {}
+        right = {}
+        ans = 0
+        for depth, pos in dfs (root):
+            left[depth] = min (left.get (depth, pos), pos)
+            right[depth] = max (right.get (depth, pos), pos)
+            ans = max (ans, right[depth] - left[depth] + 1)
+    
+        return ans
+
     # 二叉树的先序遍历非递归实现
     def xianxu(self):
         """
@@ -232,6 +286,24 @@ class Tree(object):
         self.invertTree (root.left)
         return root
 
+    # 递归 是否对称？
+    def isSymmetric(self, root):
+        def isSym(L, R):
+            if L and R and L.data == R.data:
+                return isSym (L.left, R.right) and isSym (L.right, R.left)
+            return L == R
+    
+        return isSym (root, root)
+
+    # 迭代 是否对称？
+    def isSymmetric2(self, root):
+        queue = [root]
+        while queue:
+            values = [i.data if i else None for i in queue]
+            if values != values[::-1]: return False
+            queue = [child for i in queue if i for child in (i.left, i.right)]
+        return True
+
     # 比较二叉树是否完全一样
     def isIdentical(self, a, b):
         if a == None and b == None:
@@ -239,13 +311,47 @@ class Tree(object):
         if a == None or b == None:
             return False
 
-        if a.val != b.val:
+        if a.data != b.data:
             return False
 
         return self.isIdentical (a.left, b.left) and self.isIdentical (a.right, b.right)
 
+    # 打印二叉树矩阵
+    def TreeMatrix(self, root):
+        rows = self.height (root)
+        cols = 2 ** rows - 1
+        res = [['' for _ in range (cols)] for _ in range (rows)]
+    
+        def traverse(node, level, pos):
+            if not node:
+                return
+            left_padding, spacing = 2 ** (rows - level - 1) - 1, 2 ** (rows - level) - 1
+            index = left_padding + pos * (spacing + 1)
+            # print (level, index, node.data)
+            res[level][index] = str (node.data)
+            traverse (node.left, level + 1, pos << 1)
+            traverse (node.right, level + 1, (pos << 1) + 1)
+    
+        traverse (root, 0, 0)
+        return res
 
-
+    # 和叶数的和
+    def sumNumbers(self, root):
+        self.res = 0
+    
+        def dfs(root, value):
+            if root:
+                # if not root.left and not root.right:
+                #    self.res += value*10 + root.val
+                dfs (root.left, value * 10 + root.data)
+                # if not root.left and not root.right:
+                #    self.res += value*10 + root.val
+                dfs (root.right, value * 10 + root.data)
+                if not root.left and not root.right:
+                    self.res += value * 10 + root.data
+    
+        dfs (root, 0)
+        return self.res
 
 if __name__ == '__main__':
     # 手动创建一课二叉树
@@ -273,10 +379,12 @@ if __name__ == '__main__':
     # tree.invertTree(tree.root)
     print ('调用方法打印一下效果：以层次遍历实现')
     print (tree.print ())
+    # print ('调用方法打印一下效果：打印二叉树矩阵')
+    # print(tree.TreeMatrix(tree.root))
 
-    print ('前序遍历递归实现', tree.qianxuDG (tree.root))
-    print ('中序遍历递归实现', tree.zhongxuDG (tree.root))
-    print ('后序遍历递归实现', tree.houxuDG (tree.root))
+    # print ('前序遍历递归实现', tree.qianxuDG (tree.root))
+    # print ('中序遍历递归实现', tree.zhongxuDG (tree.root))
+    # print ('后序遍历递归实现', tree.houxuDG (tree.root))
     
     # # 求取二叉树的高度
     # print('求取二叉树的高度')
@@ -293,5 +401,8 @@ if __name__ == '__main__':
     # print (next (tree.zhongxuIterator(tree.root)))
     # print('后序非递归遍历测试')
     # tree.houxu()
-    # print('二叉树的最大宽度为： {}'.format(tree.width(tree.root)))
+    # print ('二叉树的最大宽度为：',tree.width(tree.root))
+    # print ('二叉树的最大宽度为：',tree.maxWidth (tree.root))
     # print('二叉树的节点数目为： {}'.format(tree.getsize()))
+    # print("是否对称？",tree.isSymmetric(tree.root))
+    print ("和叶数的和", tree.sumNumbers (tree.root))
