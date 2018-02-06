@@ -14,19 +14,26 @@ from time import sleep
 # while 1:
 html = urlopen("http://blog.csdn.net/chenvast")
 bsObj = BeautifulSoup (html, "html.parser")
-userInfoObj = bsObj.find("div", {"class":"content clearfix"})
-
-data = userInfoObj.find("aside")
-data = data.find("div", {"class":"interflow clearfix"})
-dataString = data.get_text()
+userInfoObj = bsObj.find ("ul", {"id": "blog_rank"})
+userInfoObj2 = bsObj.find ("ul", {"id": "blog_statistics"})
+dataString = userInfoObj.get_text () + userInfoObj2.get_text ()
 dataList = dataString.strip("\n").split("\n")
-TotalPV = dataList[9]
-Ranking = dataList[17]
-TotalPV = sub(",","",TotalPV)
-Ranking = sub(",","",Ranking)
-print(dataList)
-print(TotalPV,Ranking)
 
+# print(dataList[0],dataList[5],dataList[7],dataList[8],dataList[9])
+# print(dataList[0][3:-1],dataList[5][4:-1],dataList[7][3:-1],dataList[8][3:-1],dataList[9][3:-1])
+
+# 总访问量
+TotalPV = dataList[0][3:-1]
+# 排名
+Ranking = dataList[5][4:-1]
+# 原创
+Original = dataList[7][3:-1]
+# 转载
+Retransmission = dataList[8][3:-1]
+# 译文
+Translation = dataList[9][3:-1]
+
+# 时间
 nowtime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 nowdate = datetime.now().strftime("%Y-%m-%d")
 
@@ -34,7 +41,8 @@ nowdate = datetime.now().strftime("%Y-%m-%d")
 filename = "data_"+ nowdate+".csv"
 
 # 文本格式：时间，总访问量，排名
-filedata = nowtime+","+TotalPV+","+Ranking+"\n"
+filedata = nowtime + "," + TotalPV + "," + Ranking + "," + Original + "," + Retransmission + "," + Translation + "\n"
+# print(filedata)
 
 # with open (filename, "a") as f:
 #     f.write (filedata)
