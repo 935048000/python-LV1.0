@@ -27,29 +27,28 @@ q.push(Item('bar'), 5)
 q.push(Item('spam'), 4)
 q.push(Item('grok'), 1)
 
-print q.pop()
-print q.pop()
-print q.pop()
-print q.pop()
+print (q.pop ())
+print (q.pop ())
+print (q.pop ())
+print (q.pop ())
 
 #队列比较
 
 a = Item('foo')
 b = Item('bar')
 
-print "a<b:",a < b
+print ("a<b:", a < b)
 
 a = (1, Item('foo'))
 b = (5, Item('bar'))
 c = (1, Item('grok'))
 
-print "a<b:",a < b
-print "a<c:",a < c
-
+print ("a<b:", a < b)
+print ("a<c:", a < c)
 
 a = (1, 0, Item('foo'))
 b = (5, 1, Item('bar'))
 c = (1, 2, Item('grok'))
 
-print "a<b:",a < b
-print "a<c:",a < c
+print ("a<b:", a < b)
+print ("a<c:", a < c)
