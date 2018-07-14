@@ -52,16 +52,15 @@ class Solution(object):
             subList.remove(m)
 
 
-
-# s =Solution()
+s = Solution ()
 # t1 = time.time ()
-# print(s.permute([1,2,3]))
+print (s.permute ([1, 2, 3]))
 # print ((time.time () - t1), "s")
 
 
 
 # t2 = time.time ()
 # T = list(test([1,2,3]))
-# #T = test([1,2,3,4,5,6,7,8,9,10])
+# print(T)
 #print(str(T[0]).strip("[]").strip(","))
 # print ((time.time () - t2), "s")
