@@ -50,5 +50,3 @@ filedata = nowtime + "," + TotalPV + "," + Ranking + "," + Original + "," + Retr
 
 
 
-
-

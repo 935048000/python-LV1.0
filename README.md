@@ -57,3 +57,5 @@ vision_tools：实用的可视化小工具
 
 web：服务器和客户端编程（C/S）
 
+
+translate:翻译API（百度 and 有道）

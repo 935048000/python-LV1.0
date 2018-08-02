@@ -1,0 +1,3108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+     id="chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6" class="pygal-chart"
+     viewBox="0 0 1300 600"><!--Generated with pygal 2.4.0 (lxml) ©Kozea 2012-2016 on 2017-12-23--><!--http://pygal.org--><!--http://github.com/Kozea/pygal-->
+    <defs>
+        <style type="text/css">
+            #chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6{-webkit-user-select:none;-webkit-font-smoothing:antialiased;font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .title{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:16px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .legends .legend
+            text{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:14px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            text{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:10px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            text.major{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:10px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .text-overlay
+            text.value{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:16px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .text-overlay
+            text.label{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:10px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .tooltip{font-family:Consolas,"Liberation
+            Mono",Menlo,Courier,monospace;font-size:14px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            text.no_data{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:64px}
+            #chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6{background-color:rgba(249,249,249,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            path,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            rect,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            circle{-webkit-transition:150ms;-moz-transition:150ms;transition:150ms}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .graph &gt; .background{fill:rgba(249,249,249,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .plot &gt;
+            .background{fill:rgba(255,255,255,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .graph{fill:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            text.no_data{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .title{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .legends .legend
+            text{fill:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .legends .legend:hover
+            text{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            .line{stroke:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            .guide.line{stroke:rgba(0,0,0,.54)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            .major.line{stroke:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            text.major{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y .guides:hover
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .line-graph .axis.x .guides:hover
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .stackedline-graph .axis.x .guides:hover
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .xy-graph .axis.x .guides:hover
+            .guide.line{stroke:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis .guides:hover
+            text{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .reactive{fill-opacity:.7;stroke-opacity:.8}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .ci{stroke:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .reactive.active,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .active
+            .reactive{fill-opacity:.8;stroke-opacity:.9;stroke-width:4}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .ci
+            .reactive.active{stroke-width:1.5}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .series
+            text{fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            rect{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,1);-webkit-transition:opacity 150ms;-moz-transition:opacity
+            150ms;transition:opacity 150ms}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .label{fill:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .label{fill:rgba(0,0,0,.87)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .legend{font-size:.8em;fill:rgba(0,0,0,.54)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .x_label{font-size:.6em;fill:rgba(0,0,0,1)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .xlink{font-size:.5em;text-decoration:underline}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            .value{font-size:1.5em}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .bound{font-size:.5em}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .max-value{font-size:.75em;fill:rgba(0,0,0,.54)}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .map-element{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,.54)
+            !important}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .map-element
+            .reactive{fill-opacity:inherit;stroke-opacity:inherit}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .color-0,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .color-0
+            a:visited{stroke:#F44336;fill:#F44336}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .color-1,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .color-1
+            a:visited{stroke:#3F51B5;fill:#3F51B5}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .text-overlay .color-0
+            text{fill:black}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .text-overlay .color-1 text{fill:black}
+            #chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            text.no_data{text-anchor:middle}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .guide.line{fill:none}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .centered{text-anchor:middle}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .title{text-anchor:middle}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .legends .legend
+            text{fill-opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.x
+            text{text-anchor:middle}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.x:not(.web)
+            text[transform]{text-anchor:start}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.x:not(.web)
+            text[transform].backwards{text-anchor:end}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y
+            text{text-anchor:end}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y
+            text[transform].backwards{text-anchor:start}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y2
+            text{text-anchor:start}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y2
+            text[transform].backwards{text-anchor:end}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            .guide.line{stroke-dasharray:4,4}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis
+            .major.guide.line{stroke-dasharray:6,6}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .horizontal .axis.y
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .horizontal .axis.y2
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .vertical .axis.x
+            .guide.line{opacity:0}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .horizontal .axis.always_show
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .vertical .axis.always_show .guide.line{opacity:1
+            !important}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y .guides:hover
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.y2 .guides:hover
+            .guide.line,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis.x .guides:hover
+            .guide.line{opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .axis .guides:hover
+            text{opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .nofill{fill:none}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .subtle-fill{fill-opacity:.2}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .dot{stroke-width:1px;fill-opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .dot.active{stroke-width:5px}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .dot.negative{fill:transparent}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            text,#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 tspan{stroke:none
+            !important}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .series
+            text.active{opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            rect{fill-opacity:.95;stroke-width:.5}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6 .tooltip
+            text{fill-opacity:1}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .showable{visibility:hidden}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .showable.shown{visibility:visible}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .gauge-background{fill:rgba(229,229,229,1);stroke:none}#chart-4fc2e52e-ef38-4ea4-9044-84cb4a277fe6
+            .bg-lines{stroke:rgba(249,249,249,1);stroke-width:2px}
+        </style>
+        <script type="text/javascript">window.pygal = window.pygal || {};window.pygal.config = window.pygal.config ||
+            {};window.pygal.config['4fc2e52e-ef38-4ea4-9044-84cb4a277fe6'] = {"allow_interruptions": false, "box_mode":
+            "extremes", "classes": ["pygal-chart"], "css": ["file://style.css", "file://graph.css"], "defs": [],
+            "disable_xml_declaration": false, "dots_size": 2.5, "dynamic_print_values": false, "explicit_size": false,
+            "fill": false, "force_uri_protocol": "https", "formatter": null, "half_pie": false, "height": 600,
+            "include_x_axis": false, "inner_radius": 0, "interpolate": null, "interpolation_parameters": {},
+            "interpolation_precision": 250, "inverse_y_axis": false, "js":
+            ["//kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js"], "legend_at_bottom": false,
+            "legend_at_bottom_columns": null, "legend_box_size": 12, "logarithmic": false, "margin": 20,
+            "margin_bottom": null, "margin_left": null, "margin_right": null, "margin_top": null, "max_scale": 16,
+            "min_scale": 4, "missing_value_fill_truncation": "x", "no_data_text": "No data", "no_prefix": false,
+            "order_min": null, "pretty_print": false, "print_labels": false, "print_values": false,
+            "print_values_position": "center", "print_zeroes": true, "range": null, "rounded_bars": null,
+            "secondary_range": null, "show_dots": true, "show_legend": true, "show_minor_x_labels": true,
+            "show_minor_y_labels": true, "show_only_major_dots": false, "show_x_guides": false, "show_x_labels": true,
+            "show_y_guides": true, "show_y_labels": true, "spacing": 10, "stack_from_top": false, "strict": false,
+            "stroke": true, "stroke_style": null, "style": {"background": "rgba(249, 249, 249, 1)", "ci_colors": [],
+            "colors": ["#F44336", "#3F51B5", "#009688", "#FFC107", "#FF5722", "#9C27B0", "#03A9F4", "#8BC34A",
+            "#FF9800", "#E91E63", "#2196F3", "#4CAF50", "#FFEB3B", "#673AB7", "#00BCD4", "#CDDC39", "#9E9E9E",
+            "#607D8B"], "font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "foreground":
+            "rgba(0, 0, 0, .87)", "foreground_strong": "rgba(0, 0, 0, 1)", "foreground_subtle": "rgba(0, 0, 0, .54)",
+            "guide_stroke_dasharray": "4,4", "label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier,
+            monospace", "label_font_size": 10, "legend_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier,
+            monospace", "legend_font_size": 14, "major_guide_stroke_dasharray": "6,6", "major_label_font_family":
+            "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "major_label_font_size": 10,
+            "no_data_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace", "no_data_font_size": 64,
+            "opacity": ".7", "opacity_hover": ".8", "plot_background": "rgba(255, 255, 255, 1)", "stroke_opacity": ".8",
+            "stroke_opacity_hover": ".9", "title_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier,
+            monospace", "title_font_size": 16, "tooltip_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier,
+            monospace", "tooltip_font_size": 14, "transition": "150ms", "value_background": "rgba(229, 229, 229, 1)",
+            "value_colors": [], "value_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+            "value_font_size": 16, "value_label_font_family": "Consolas, \"Liberation Mono\", Menlo, Courier,
+            monospace", "value_label_font_size": 10}, "title": "2017-12-22\u65e5\u7684\u7968\u6570\u589e\u957f\u56fe",
+            "tooltip_border_radius": 0, "tooltip_fancy_mode": true, "truncate_label": null, "truncate_legend": null,
+            "width": 1300, "x_label_rotation": 90, "x_labels": ["00:04:43", "00:15:17", "00:25:49", "00:36:22",
+            "00:46:54", "00:57:25", "01:07:57", "01:18:30", "01:29:02", "01:39:33", "01:50:04", "02:00:35", "02:11:06",
+            "02:21:37", "02:32:13", "02:42:44", "02:53:15", "03:15:05", "03:25:37", "03:36:09", "03:46:40", "03:57:13",
+            "04:07:46", "04:18:18", "04:28:50", "04:39:22", "04:49:53", "05:00:24", "05:10:55", "05:21:28", "05:31:59",
+            "05:42:30", "05:53:01", "06:03:37", "06:14:08", "06:24:40", "06:35:11", "06:45:43", "06:56:15", "07:06:46",
+            "07:17:17", "07:27:49", "07:38:21", "07:48:51", "07:59:23", "08:09:54", "08:20:27", "08:31:00", "08:41:33",
+            "08:52:05", "09:02:38", "09:13:12", "09:23:45", "09:34:18", "09:44:52", "09:55:25", "10:06:00", "10:16:37",
+            "10:27:11", "10:37:46", "10:48:21", "10:58:54", "11:09:29", "11:20:01", "11:30:33", "11:41:06", "11:51:39",
+            "12:02:12", "12:12:45", "12:23:21", "12:33:55", "12:44:29", "12:55:02", "13:05:35", "13:16:08", "13:26:42",
+            "13:37:16", "13:47:49", "13:58:22", "14:08:55", "14:19:28", "14:30:01", "14:40:35", "14:51:08", "15:01:41",
+            "15:12:15", "15:22:50", "15:33:23", "15:43:57", "15:54:32", "16:05:05", "16:15:40", "16:26:13", "16:36:45",
+            "16:47:18", "16:57:50", "17:08:33", "17:19:05", "17:29:37", "17:40:17", "17:50:57", "18:01:36", "18:12:16",
+            "18:22:48", "18:33:20", "18:43:53", "18:54:26", "19:04:57", "19:15:36", "19:26:09", "19:36:43", "19:47:16",
+            "19:57:49", "20:08:23", "20:18:55", "20:29:28", "20:40:01", "20:50:33", "21:01:06", "21:11:40", "21:22:11",
+            "21:32:44", "21:43:18", "21:53:50", "22:04:24", "22:15:00", "22:25:34", "22:36:07", "22:46:39", "22:57:12",
+            "23:07:44", "23:18:17", "23:28:50", "23:39:22", "23:49:54"], "x_labels_major": null, "x_labels_major_count":
+            null, "x_labels_major_every": null, "x_title": null, "xrange": null, "y_label_rotation": 0, "y_labels":
+            null, "y_labels_major": null, "y_labels_major_count": null, "y_labels_major_every": null, "y_title": null,
+            "zero": 0, "legends": ["\u5357\u9633\u7406\u5de5\u5b66\u9662\u5b98\u65b9\u5fae\u4fe1",
+            "\u5357\u9633\u7406\u5de5\u5b66\u9662\u5b98\u65b9\u5fae\u535a"]}
+        </script>
+        <script type="text/javascript" xlink:href="https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js"/>
+    </defs>
+    <title>2017-12-22日的票数增长图</title>
+    <g class="graph line-graph vertical">
+        <rect class="background" height="600" width="1300" x="0" y="0"/>
+        <g class="plot" transform="translate(166, 46)">
+            <rect class="background" height="476.0" width="1114.0" x="0" y="0"/>
+            <g class="axis y always_show">
+                <path class="line" d="M0.000000 476.000000 h1114.000000"/>
+                <g class="guides">
+                    <path class="guide line" d="M0.000000 387.628422 h1114.000000"/>
+                    <text class="" x="-5" y="391.12842242503257">10000</text>
+                    <title>10000</title>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M0.000000 286.223236 h1114.000000"/>
+                    <text class="" x="-5" y="289.72323627408366">20000</text>
+                    <title>20000</title>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M0.000000 184.818050 h1114.000000"/>
+                    <text class="" x="-5" y="188.3180501231348">30000</text>
+                    <title>30000</title>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M0.000000 83.412864 h1114.000000"/>
+                    <text class="" x="-5" y="86.91286397218596">40000</text>
+                    <title>40000</title>
+                </g>
+            </g>
+            <g class="axis x">
+                <g class="guides">
+                    <path class="line" d="M21.423077 0.000000 v476.000000"/>
+                    <text class="" x="21.423076923076923" y="491.0" transform="rotate(90 21.423077 491.000000)">
+                        00:04:43
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M29.416762 0.000000 v476.000000"/>
+                    <text class="" x="29.416762342135474" y="491.0" transform="rotate(90 29.416762 491.000000)">
+                        00:15:17
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M37.410448 0.000000 v476.000000"/>
+                    <text class="" x="37.41044776119403" y="491.0" transform="rotate(90 37.410448 491.000000)">
+                        00:25:49
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M45.404133 0.000000 v476.000000"/>
+                    <text class="" x="45.40413318025258" y="491.0" transform="rotate(90 45.404133 491.000000)">
+                        00:36:22
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M53.397819 0.000000 v476.000000"/>
+                    <text class="" x="53.39781859931114" y="491.0" transform="rotate(90 53.397819 491.000000)">
+                        00:46:54
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M61.391504 0.000000 v476.000000"/>
+                    <text class="" x="61.391504018369695" y="491.0" transform="rotate(90 61.391504 491.000000)">
+                        00:57:25
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M69.385189 0.000000 v476.000000"/>
+                    <text class="" x="69.38518943742824" y="491.0" transform="rotate(90 69.385189 491.000000)">
+                        01:07:57
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M77.378875 0.000000 v476.000000"/>
+                    <text class="" x="77.3788748564868" y="491.0" transform="rotate(90 77.378875 491.000000)">01:18:30
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M85.372560 0.000000 v476.000000"/>
+                    <text class="" x="85.37256027554534" y="491.0" transform="rotate(90 85.372560 491.000000)">
+                        01:29:02
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M93.366246 0.000000 v476.000000"/>
+                    <text class="" x="93.3662456946039" y="491.0" transform="rotate(90 93.366246 491.000000)">01:39:33
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M101.359931 0.000000 v476.000000"/>
+                    <text class="" x="101.35993111366244" y="491.0" transform="rotate(90 101.359931 491.000000)">
+                        01:50:04
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M109.353617 0.000000 v476.000000"/>
+                    <text class="" x="109.353616532721" y="491.0" transform="rotate(90 109.353617 491.000000)">
+                        02:00:35
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M117.347302 0.000000 v476.000000"/>
+                    <text class="" x="117.34730195177956" y="491.0" transform="rotate(90 117.347302 491.000000)">
+                        02:11:06
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M125.340987 0.000000 v476.000000"/>
+                    <text class="" x="125.34098737083814" y="491.0" transform="rotate(90 125.340987 491.000000)">
+                        02:21:37
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M133.334673 0.000000 v476.000000"/>
+                    <text class="" x="133.33467278989664" y="491.0" transform="rotate(90 133.334673 491.000000)">
+                        02:32:13
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M141.328358 0.000000 v476.000000"/>
+                    <text class="" x="141.32835820895522" y="491.0" transform="rotate(90 141.328358 491.000000)">
+                        02:42:44
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M149.322044 0.000000 v476.000000"/>
+                    <text class="" x="149.32204362801377" y="491.0" transform="rotate(90 149.322044 491.000000)">
+                        02:53:15
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M157.315729 0.000000 v476.000000"/>
+                    <text class="" x="157.31572904707232" y="491.0" transform="rotate(90 157.315729 491.000000)">
+                        03:15:05
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M165.309414 0.000000 v476.000000"/>
+                    <text class="" x="165.30941446613087" y="491.0" transform="rotate(90 165.309414 491.000000)">
+                        03:25:37
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M173.303100 0.000000 v476.000000"/>
+                    <text class="" x="173.30309988518943" y="491.0" transform="rotate(90 173.303100 491.000000)">
+                        03:36:09
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M181.296785 0.000000 v476.000000"/>
+                    <text class="" x="181.29678530424798" y="491.0" transform="rotate(90 181.296785 491.000000)">
+                        03:46:40
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M189.290471 0.000000 v476.000000"/>
+                    <text class="" x="189.29047072330656" y="491.0" transform="rotate(90 189.290471 491.000000)">
+                        03:57:13
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M197.284156 0.000000 v476.000000"/>
+                    <text class="" x="197.2841561423651" y="491.0" transform="rotate(90 197.284156 491.000000)">
+                        04:07:46
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M205.277842 0.000000 v476.000000"/>
+                    <text class="" x="205.27784156142363" y="491.0" transform="rotate(90 205.277842 491.000000)">
+                        04:18:18
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M213.271527 0.000000 v476.000000"/>
+                    <text class="" x="213.27152698048215" y="491.0" transform="rotate(90 213.271527 491.000000)">
+                        04:28:50
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M221.265212 0.000000 v476.000000"/>
+                    <text class="" x="221.26521239954073" y="491.0" transform="rotate(90 221.265212 491.000000)">
+                        04:39:22
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M229.258898 0.000000 v476.000000"/>
+                    <text class="" x="229.25889781859928" y="491.0" transform="rotate(90 229.258898 491.000000)">
+                        04:49:53
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M237.252583 0.000000 v476.000000"/>
+                    <text class="" x="237.25258323765783" y="491.0" transform="rotate(90 237.252583 491.000000)">
+                        05:00:24
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M245.246269 0.000000 v476.000000"/>
+                    <text class="" x="245.24626865671638" y="491.0" transform="rotate(90 245.246269 491.000000)">
+                        05:10:55
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M253.239954 0.000000 v476.000000"/>
+                    <text class="" x="253.23995407577496" y="491.0" transform="rotate(90 253.239954 491.000000)">
+                        05:21:28
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M261.233639 0.000000 v476.000000"/>
+                    <text class="" x="261.2336394948335" y="491.0" transform="rotate(90 261.233639 491.000000)">
+                        05:31:59
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M269.227325 0.000000 v476.000000"/>
+                    <text class="" x="269.2273249138921" y="491.0" transform="rotate(90 269.227325 491.000000)">
+                        05:42:30
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M277.221010 0.000000 v476.000000"/>
+                    <text class="" x="277.2210103329506" y="491.0" transform="rotate(90 277.221010 491.000000)">
+                        05:53:01
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M285.214696 0.000000 v476.000000"/>
+                    <text class="" x="285.2146957520092" y="491.0" transform="rotate(90 285.214696 491.000000)">
+                        06:03:37
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M293.208381 0.000000 v476.000000"/>
+                    <text class="" x="293.20838117106774" y="491.0" transform="rotate(90 293.208381 491.000000)">
+                        06:14:08
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M301.202067 0.000000 v476.000000"/>
+                    <text class="" x="301.2020665901263" y="491.0" transform="rotate(90 301.202067 491.000000)">
+                        06:24:40
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M309.195752 0.000000 v476.000000"/>
+                    <text class="" x="309.19575200918484" y="491.0" transform="rotate(90 309.195752 491.000000)">
+                        06:35:11
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M317.189437 0.000000 v476.000000"/>
+                    <text class="" x="317.1894374282435" y="491.0" transform="rotate(90 317.189437 491.000000)">
+                        06:45:43
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M325.183123 0.000000 v476.000000"/>
+                    <text class="" x="325.18312284730195" y="491.0" transform="rotate(90 325.183123 491.000000)">
+                        06:56:15
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M333.176808 0.000000 v476.000000"/>
+                    <text class="" x="333.17680826636047" y="491.0" transform="rotate(90 333.176808 491.000000)">
+                        07:06:46
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M341.170494 0.000000 v476.000000"/>
+                    <text class="" x="341.17049368541905" y="491.0" transform="rotate(90 341.170494 491.000000)">
+                        07:17:17
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M349.164179 0.000000 v476.000000"/>
+                    <text class="" x="349.16417910447757" y="491.0" transform="rotate(90 349.164179 491.000000)">
+                        07:27:49
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M357.157865 0.000000 v476.000000"/>
+                    <text class="" x="357.1578645235362" y="491.0" transform="rotate(90 357.157865 491.000000)">
+                        07:38:21
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M365.151550 0.000000 v476.000000"/>
+                    <text class="" x="365.15154994259467" y="491.0" transform="rotate(90 365.151550 491.000000)">
+                        07:48:51
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M373.145235 0.000000 v476.000000"/>
+                    <text class="" x="373.1452353616533" y="491.0" transform="rotate(90 373.145235 491.000000)">
+                        07:59:23
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M381.138921 0.000000 v476.000000"/>
+                    <text class="" x="381.1389207807118" y="491.0" transform="rotate(90 381.138921 491.000000)">
+                        08:09:54
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M389.132606 0.000000 v476.000000"/>
+                    <text class="" x="389.1326061997704" y="491.0" transform="rotate(90 389.132606 491.000000)">
+                        08:20:27
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M397.126292 0.000000 v476.000000"/>
+                    <text class="" x="397.12629161882893" y="491.0" transform="rotate(90 397.126292 491.000000)">
+                        08:31:00
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M405.119977 0.000000 v476.000000"/>
+                    <text class="" x="405.1199770378875" y="491.0" transform="rotate(90 405.119977 491.000000)">
+                        08:41:33
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M413.113662 0.000000 v476.000000"/>
+                    <text class="" x="413.11366245694603" y="491.0" transform="rotate(90 413.113662 491.000000)">
+                        08:52:05
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M421.107348 0.000000 v476.000000"/>
+                    <text class="" x="421.1073478760046" y="491.0" transform="rotate(90 421.107348 491.000000)">
+                        09:02:38
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M429.101033 0.000000 v476.000000"/>
+                    <text class="" x="429.10103329506313" y="491.0" transform="rotate(90 429.101033 491.000000)">
+                        09:13:12
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M437.094719 0.000000 v476.000000"/>
+                    <text class="" x="437.0947187141217" y="491.0" transform="rotate(90 437.094719 491.000000)">
+                        09:23:45
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M445.088404 0.000000 v476.000000"/>
+                    <text class="" x="445.08840413318023" y="491.0" transform="rotate(90 445.088404 491.000000)">
+                        09:34:18
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M453.082090 0.000000 v476.000000"/>
+                    <text class="" x="453.0820895522388" y="491.0" transform="rotate(90 453.082090 491.000000)">
+                        09:44:52
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M461.075775 0.000000 v476.000000"/>
+                    <text class="" x="461.0757749712974" y="491.0" transform="rotate(90 461.075775 491.000000)">
+                        09:55:25
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M469.069460 0.000000 v476.000000"/>
+                    <text class="" x="469.0694603903559" y="491.0" transform="rotate(90 469.069460 491.000000)">
+                        10:06:00
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M477.063146 0.000000 v476.000000"/>
+                    <text class="" x="477.0631458094145" y="491.0" transform="rotate(90 477.063146 491.000000)">
+                        10:16:37
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M485.056831 0.000000 v476.000000"/>
+                    <text class="" x="485.05683122847296" y="491.0" transform="rotate(90 485.056831 491.000000)">
+                        10:27:11
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M493.050517 0.000000 v476.000000"/>
+                    <text class="" x="493.0505166475316" y="491.0" transform="rotate(90 493.050517 491.000000)">
+                        10:37:46
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M501.044202 0.000000 v476.000000"/>
+                    <text class="" x="501.0442020665901" y="491.0" transform="rotate(90 501.044202 491.000000)">
+                        10:48:21
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M509.037887 0.000000 v476.000000"/>
+                    <text class="" x="509.03788748564864" y="491.0" transform="rotate(90 509.037887 491.000000)">
+                        10:58:54
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M517.031573 0.000000 v476.000000"/>
+                    <text class="" x="517.0315729047072" y="491.0" transform="rotate(90 517.031573 491.000000)">
+                        11:09:29
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M525.025258 0.000000 v476.000000"/>
+                    <text class="" x="525.0252583237658" y="491.0" transform="rotate(90 525.025258 491.000000)">
+                        11:20:01
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M533.018944 0.000000 v476.000000"/>
+                    <text class="" x="533.0189437428243" y="491.0" transform="rotate(90 533.018944 491.000000)">
+                        11:30:33
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M541.012629 0.000000 v476.000000"/>
+                    <text class="" x="541.0126291618828" y="491.0" transform="rotate(90 541.012629 491.000000)">
+                        11:41:06
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M549.006315 0.000000 v476.000000"/>
+                    <text class="" x="549.0063145809414" y="491.0" transform="rotate(90 549.006315 491.000000)">
+                        11:51:39
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M557.000000 0.000000 v476.000000"/>
+                    <text class="" x="557.0" y="491.0" transform="rotate(90 557.000000 491.000000)">12:02:12</text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M564.993685 0.000000 v476.000000"/>
+                    <text class="" x="564.9936854190586" y="491.0" transform="rotate(90 564.993685 491.000000)">
+                        12:12:45
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M572.987371 0.000000 v476.000000"/>
+                    <text class="" x="572.9873708381172" y="491.0" transform="rotate(90 572.987371 491.000000)">
+                        12:23:21
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M580.981056 0.000000 v476.000000"/>
+                    <text class="" x="580.9810562571756" y="491.0" transform="rotate(90 580.981056 491.000000)">
+                        12:33:55
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M588.974742 0.000000 v476.000000"/>
+                    <text class="" x="588.9747416762342" y="491.0" transform="rotate(90 588.974742 491.000000)">
+                        12:44:29
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M596.968427 0.000000 v476.000000"/>
+                    <text class="" x="596.9684270952928" y="491.0" transform="rotate(90 596.968427 491.000000)">
+                        12:55:02
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M604.962113 0.000000 v476.000000"/>
+                    <text class="" x="604.9621125143514" y="491.0" transform="rotate(90 604.962113 491.000000)">
+                        13:05:35
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M612.955798 0.000000 v476.000000"/>
+                    <text class="" x="612.9557979334099" y="491.0" transform="rotate(90 612.955798 491.000000)">
+                        13:16:08
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M620.949483 0.000000 v476.000000"/>
+                    <text class="" x="620.9494833524683" y="491.0" transform="rotate(90 620.949483 491.000000)">
+                        13:26:42
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M628.943169 0.000000 v476.000000"/>
+                    <text class="" x="628.943168771527" y="491.0" transform="rotate(90 628.943169 491.000000)">
+                        13:37:16
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M636.936854 0.000000 v476.000000"/>
+                    <text class="" x="636.9368541905856" y="491.0" transform="rotate(90 636.936854 491.000000)">
+                        13:47:49
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M644.930540 0.000000 v476.000000"/>
+                    <text class="" x="644.9305396096441" y="491.0" transform="rotate(90 644.930540 491.000000)">
+                        13:58:22
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M652.924225 0.000000 v476.000000"/>
+                    <text class="" x="652.9242250287026" y="491.0" transform="rotate(90 652.924225 491.000000)">
+                        14:08:55
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M660.917910 0.000000 v476.000000"/>
+                    <text class="" x="660.9179104477611" y="491.0" transform="rotate(90 660.917910 491.000000)">
+                        14:19:28
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M668.911596 0.000000 v476.000000"/>
+                    <text class="" x="668.9115958668198" y="491.0" transform="rotate(90 668.911596 491.000000)">
+                        14:30:01
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M676.905281 0.000000 v476.000000"/>
+                    <text class="" x="676.9052812858782" y="491.0" transform="rotate(90 676.905281 491.000000)">
+                        14:40:35
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M684.898967 0.000000 v476.000000"/>
+                    <text class="" x="684.8989667049368" y="491.0" transform="rotate(90 684.898967 491.000000)">
+                        14:51:08
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M692.892652 0.000000 v476.000000"/>
+                    <text class="" x="692.8926521239954" y="491.0" transform="rotate(90 692.892652 491.000000)">
+                        15:01:41
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M700.886338 0.000000 v476.000000"/>
+                    <text class="" x="700.8863375430541" y="491.0" transform="rotate(90 700.886338 491.000000)">
+                        15:12:15
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M708.880023 0.000000 v476.000000"/>
+                    <text class="" x="708.8800229621124" y="491.0" transform="rotate(90 708.880023 491.000000)">
+                        15:22:50
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M716.873708 0.000000 v476.000000"/>
+                    <text class="" x="716.873708381171" y="491.0" transform="rotate(90 716.873708 491.000000)">
+                        15:33:23
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M724.867394 0.000000 v476.000000"/>
+                    <text class="" x="724.8673938002296" y="491.0" transform="rotate(90 724.867394 491.000000)">
+                        15:43:57
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M732.861079 0.000000 v476.000000"/>
+                    <text class="" x="732.8610792192883" y="491.0" transform="rotate(90 732.861079 491.000000)">
+                        15:54:32
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M740.854765 0.000000 v476.000000"/>
+                    <text class="" x="740.8547646383468" y="491.0" transform="rotate(90 740.854765 491.000000)">
+                        16:05:05
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M748.848450 0.000000 v476.000000"/>
+                    <text class="" x="748.8484500574052" y="491.0" transform="rotate(90 748.848450 491.000000)">
+                        16:15:40
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M756.842135 0.000000 v476.000000"/>
+                    <text class="" x="756.8421354764638" y="491.0" transform="rotate(90 756.842135 491.000000)">
+                        16:26:13
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M764.835821 0.000000 v476.000000"/>
+                    <text class="" x="764.8358208955224" y="491.0" transform="rotate(90 764.835821 491.000000)">
+                        16:36:45
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M772.829506 0.000000 v476.000000"/>
+                    <text class="" x="772.829506314581" y="491.0" transform="rotate(90 772.829506 491.000000)">
+                        16:47:18
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M780.823192 0.000000 v476.000000"/>
+                    <text class="" x="780.8231917336395" y="491.0" transform="rotate(90 780.823192 491.000000)">
+                        16:57:50
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M788.816877 0.000000 v476.000000"/>
+                    <text class="" x="788.816877152698" y="491.0" transform="rotate(90 788.816877 491.000000)">
+                        17:08:33
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M796.810563 0.000000 v476.000000"/>
+                    <text class="" x="796.8105625717566" y="491.0" transform="rotate(90 796.810563 491.000000)">
+                        17:19:05
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M804.804248 0.000000 v476.000000"/>
+                    <text class="" x="804.8042479908152" y="491.0" transform="rotate(90 804.804248 491.000000)">
+                        17:29:37
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M812.797933 0.000000 v476.000000"/>
+                    <text class="" x="812.7979334098737" y="491.0" transform="rotate(90 812.797933 491.000000)">
+                        17:40:17
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M820.791619 0.000000 v476.000000"/>
+                    <text class="" x="820.7916188289323" y="491.0" transform="rotate(90 820.791619 491.000000)">
+                        17:50:57
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M828.785304 0.000000 v476.000000"/>
+                    <text class="" x="828.7853042479907" y="491.0" transform="rotate(90 828.785304 491.000000)">
+                        18:01:36
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M836.778990 0.000000 v476.000000"/>
+                    <text class="" x="836.7789896670494" y="491.0" transform="rotate(90 836.778990 491.000000)">
+                        18:12:16
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M844.772675 0.000000 v476.000000"/>
+                    <text class="" x="844.7726750861079" y="491.0" transform="rotate(90 844.772675 491.000000)">
+                        18:22:48
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M852.766361 0.000000 v476.000000"/>
+                    <text class="" x="852.7663605051664" y="491.0" transform="rotate(90 852.766361 491.000000)">
+                        18:33:20
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M860.760046 0.000000 v476.000000"/>
+                    <text class="" x="860.7600459242251" y="491.0" transform="rotate(90 860.760046 491.000000)">
+                        18:43:53
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M868.753731 0.000000 v476.000000"/>
+                    <text class="" x="868.7537313432836" y="491.0" transform="rotate(90 868.753731 491.000000)">
+                        18:54:26
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M876.747417 0.000000 v476.000000"/>
+                    <text class="" x="876.7474167623421" y="491.0" transform="rotate(90 876.747417 491.000000)">
+                        19:04:57
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M884.741102 0.000000 v476.000000"/>
+                    <text class="" x="884.7411021814006" y="491.0" transform="rotate(90 884.741102 491.000000)">
+                        19:15:36
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M892.734788 0.000000 v476.000000"/>
+                    <text class="" x="892.7347876004592" y="491.0" transform="rotate(90 892.734788 491.000000)">
+                        19:26:09
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M900.728473 0.000000 v476.000000"/>
+                    <text class="" x="900.7284730195179" y="491.0" transform="rotate(90 900.728473 491.000000)">
+                        19:36:43
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M908.722158 0.000000 v476.000000"/>
+                    <text class="" x="908.7221584385763" y="491.0" transform="rotate(90 908.722158 491.000000)">
+                        19:47:16
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M916.715844 0.000000 v476.000000"/>
+                    <text class="" x="916.7158438576348" y="491.0" transform="rotate(90 916.715844 491.000000)">
+                        19:57:49
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M924.709529 0.000000 v476.000000"/>
+                    <text class="" x="924.7095292766934" y="491.0" transform="rotate(90 924.709529 491.000000)">
+                        20:08:23
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M932.703215 0.000000 v476.000000"/>
+                    <text class="" x="932.7032146957521" y="491.0" transform="rotate(90 932.703215 491.000000)">
+                        20:18:55
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M940.696900 0.000000 v476.000000"/>
+                    <text class="" x="940.6969001148105" y="491.0" transform="rotate(90 940.696900 491.000000)">
+                        20:29:28
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M948.690586 0.000000 v476.000000"/>
+                    <text class="" x="948.690585533869" y="491.0" transform="rotate(90 948.690586 491.000000)">
+                        20:40:01
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M956.684271 0.000000 v476.000000"/>
+                    <text class="" x="956.6842709529276" y="491.0" transform="rotate(90 956.684271 491.000000)">
+                        20:50:33
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M964.677956 0.000000 v476.000000"/>
+                    <text class="" x="964.6779563719863" y="491.0" transform="rotate(90 964.677956 491.000000)">
+                        21:01:06
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M972.671642 0.000000 v476.000000"/>
+                    <text class="" x="972.6716417910447" y="491.0" transform="rotate(90 972.671642 491.000000)">
+                        21:11:40
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M980.665327 0.000000 v476.000000"/>
+                    <text class="" x="980.6653272101033" y="491.0" transform="rotate(90 980.665327 491.000000)">
+                        21:22:11
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M988.659013 0.000000 v476.000000"/>
+                    <text class="" x="988.659012629162" y="491.0" transform="rotate(90 988.659013 491.000000)">
+                        21:32:44
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M996.652698 0.000000 v476.000000"/>
+                    <text class="" x="996.6526980482205" y="491.0" transform="rotate(90 996.652698 491.000000)">
+                        21:43:18
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1004.646383 0.000000 v476.000000"/>
+                    <text class="" x="1004.6463834672788" y="491.0" transform="rotate(90 1004.646383 491.000000)">
+                        21:53:50
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1012.640069 0.000000 v476.000000"/>
+                    <text class="" x="1012.6400688863375" y="491.0" transform="rotate(90 1012.640069 491.000000)">
+                        22:04:24
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1020.633754 0.000000 v476.000000"/>
+                    <text class="" x="1020.6337543053962" y="491.0" transform="rotate(90 1020.633754 491.000000)">
+                        22:15:00
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1028.627440 0.000000 v476.000000"/>
+                    <text class="" x="1028.6274397244547" y="491.0" transform="rotate(90 1028.627440 491.000000)">
+                        22:25:34
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1036.621125 0.000000 v476.000000"/>
+                    <text class="" x="1036.6211251435132" y="491.0" transform="rotate(90 1036.621125 491.000000)">
+                        22:36:07
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1044.614811 0.000000 v476.000000"/>
+                    <text class="" x="1044.6148105625716" y="491.0" transform="rotate(90 1044.614811 491.000000)">
+                        22:46:39
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1052.608496 0.000000 v476.000000"/>
+                    <text class="" x="1052.6084959816303" y="491.0" transform="rotate(90 1052.608496 491.000000)">
+                        22:57:12
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1060.602181 0.000000 v476.000000"/>
+                    <text class="" x="1060.6021814006888" y="491.0" transform="rotate(90 1060.602181 491.000000)">
+                        23:07:44
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1068.595867 0.000000 v476.000000"/>
+                    <text class="" x="1068.5958668197475" y="491.0" transform="rotate(90 1068.595867 491.000000)">
+                        23:18:17
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1076.589552 0.000000 v476.000000"/>
+                    <text class="" x="1076.589552238806" y="491.0" transform="rotate(90 1076.589552 491.000000)">
+                        23:28:50
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1084.583238 0.000000 v476.000000"/>
+                    <text class="" x="1084.5832376578644" y="491.0" transform="rotate(90 1084.583238 491.000000)">
+                        23:39:22
+                    </text>
+                </g>
+                <g class="guides">
+                    <path class="guide line" d="M1092.576923 0.000000 v476.000000"/>
+                    <text class="" x="1092.576923076923" y="491.0" transform="rotate(90 1092.576923 491.000000)">
+                        23:49:54
+                    </text>
+                </g>
+            </g>
+            <g class="series serie-0 color-0">
+                <path class="line reactive nofill"
+                      d="M21.423077 319.088657 L29.416762 318.236854 37.410448 317.729828 45.404133 316.807040 53.397819 316.705635 61.391504 316.634652 69.385189 316.594090 77.378875 316.502825 85.372560 316.401420 93.366246 316.370998 101.359931 316.370998 109.353617 316.370998 117.347302 316.269593 125.340987 316.168188 133.334673 316.168188 141.328358 316.168188 149.322044 316.168188 157.315729 316.168188 165.309414 316.168188 173.303100 316.168188 181.296785 316.168188 189.290471 316.168188 197.284156 316.168188 205.277842 316.168188 213.271527 316.087064 221.265212 316.076923 229.258898 316.076923 237.252583 316.076923 245.246269 316.026220 253.239954 316.026220 261.233639 316.026220 269.227325 316.026220 277.221010 316.026220 285.214696 316.026220 293.208381 315.762567 301.202067 315.519195 309.195752 314.525424 317.189437 312.507461 325.183123 310.418514 333.176808 309.434883 341.170494 308.978560 349.164179 308.704766 357.157865 307.842822 365.151550 307.021440 373.145235 304.851369 381.138921 303.431696 389.132606 297.621179 397.126292 294.964363 405.119977 293.139070 413.113662 289.741996 421.107348 287.064899 429.101033 285.006374 437.094719 283.454875 445.088404 281.081993 453.082090 277.674779 461.075775 275.129509 469.069460 272.046791 477.063146 265.567000 485.056831 261.744024 493.050517 258.813414 501.044202 250.771983 509.037887 245.559757 517.031573 241.442706 525.025258 237.984789 533.018944 234.415327 541.012629 230.075185 549.006315 227.144575 557.000000 224.224105 564.993685 219.853542 572.987371 215.827756 580.981056 212.136607 588.974742 208.557004 596.968427 204.348689 604.962113 199.420397 612.955798 196.499928 620.949483 193.772128 628.943169 190.476460 636.936854 187.626974 644.930540 185.538027 652.924225 181.451398 660.917910 177.425612 668.911596 172.689990 676.905281 164.790526 684.898967 158.929306 692.892652 155.958134 700.886338 152.763871 708.880023 150.563378 716.873708 145.533681 724.867394 142.400261 732.861079 140.118644 740.854765 138.780096 748.848450 130.322903 756.842135 126.621614 764.835821 123.782269 772.829506 120.527162 780.823192 117.201072 788.816877 113.357815 796.810563 110.346081 804.804248 108.246994 812.797933 105.143995 820.791619 99.282776 828.785304 94.506591 836.778990 90.724178 844.772675 88.868463 852.766361 86.657830 860.760046 81.983051 868.753731 76.344922 876.747417 74.600753 884.741102 68.759815 892.734788 64.176300 900.728473 60.890772 908.722158 56.307258 916.715844 51.561495 924.709529 49.573953 932.703215 46.704187 940.696900 44.209619 948.690586 39.423294 956.684271 35.934956 964.677956 31.310879 972.671642 28.258583 980.665327 26.717224 988.659013 24.455889 996.652698 22.316239 1004.646383 20.906707 1012.640069 19.284224 1020.633754 17.276402 1028.627440 15.937853 1036.621125 14.873099 1044.614811 13.453426 1052.608496 12.419093 1060.602181 12.206142 1068.595867 10.968999 1076.589552 10.431551 1084.583238 9.762277 1092.576923 9.153846"/>
+            </g>
+            <g class="series serie-1 color-1">
+                <path class="line reactive nofill"
+                      d="M21.423077 466.846154 L29.416762 466.846154 37.410448 466.846154 45.404133 466.846154 53.397819 466.846154 61.391504 466.846154 69.385189 466.846154 77.378875 466.846154 85.372560 466.846154 93.366246 466.846154 101.359931 466.846154 109.353617 466.846154 117.347302 466.846154 125.340987 466.846154 133.334673 466.846154 141.328358 466.846154 149.322044 466.846154 157.315729 466.846154 165.309414 466.846154 173.303100 466.846154 181.296785 466.846154 189.290471 466.846154 197.284156 466.846154 205.277842 466.846154 213.271527 466.846154 221.265212 466.846154 229.258898 466.846154 237.252583 466.846154 245.246269 466.846154 253.239954 466.846154 261.233639 466.846154 269.227325 466.846154 277.221010 466.846154 285.214696 466.846154 293.208381 466.846154 301.202067 466.846154 309.195752 466.846154 317.189437 466.846154 325.183123 466.846154 333.176808 466.846154 341.170494 466.765030 349.164179 466.754889 357.157865 466.754889 365.151550 466.653484 373.145235 466.643343 381.138921 466.643343 389.132606 466.623062 397.126292 466.450674 405.119977 466.288425 413.113662 465.953788 421.107348 465.832102 429.101033 465.750978 437.094719 465.669854 445.088404 465.335217 453.082090 465.112125 461.075775 464.909315 469.069460 464.818050 477.063146 464.706504 485.056831 464.331305 493.050517 464.118354 501.044202 464.057511 509.037887 464.047371 517.031573 463.631609 525.025258 463.438940 533.018944 463.398378 541.012629 463.337534 549.006315 463.246270 557.000000 463.236129 564.993685 463.084021 572.987371 463.084021 580.981056 462.952195 588.974742 462.739244 596.968427 462.465450 604.962113 462.191656 612.955798 462.191656 620.949483 462.100391 628.943169 461.968564 636.936854 461.846878 644.930540 461.715051 652.924225 461.502101 660.917910 461.431117 668.911596 460.873388 676.905281 460.366362 684.898967 460.163552 692.892652 460.143271 700.886338 460.122990 708.880023 460.031725 716.873708 459.930320 724.867394 459.920180 732.861079 459.910039 740.854765 459.879618 748.848450 459.250905 756.842135 459.119079 764.835821 459.027814 772.829506 458.966971 780.823192 458.906128 788.816877 458.804723 796.810563 458.703317 804.804248 458.642474 812.797933 458.510648 820.791619 458.388961 828.785304 458.358540 836.778990 458.358540 844.772675 458.277416 852.766361 458.155729 860.760046 458.125308 868.753731 458.003622 876.747417 458.003622 884.741102 457.486455 892.734788 457.172099 900.728473 456.969289 908.722158 456.502825 916.715844 456.360858 924.709529 455.985658 932.703215 455.762567 940.696900 455.509054 948.690586 455.164276 956.684271 455.022309 964.677956 454.910763 972.671642 454.900623 980.665327 454.819499 988.659013 454.545705 996.652698 454.434159 1004.646383 454.221208 1012.640069 454.099522 1020.633754 453.937274 1028.627440 453.896712 1036.621125 453.856150 1044.614811 453.835868 1052.608496 453.663480 1060.602181 453.653339 1068.595867 453.602637 1076.589552 453.298421 1084.583238 453.176735 1092.576923 452.842098"/>
+            </g>
+        </g>
+        <g class="titles">
+            <text class="title plot_title" x="650.0" y="26">2017-12-22日的票数增长图</text>
+        </g>
+        <g class="plot overlay" transform="translate(166, 46)">
+            <g class="series serie-0 color-0">
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="21.423076923076923" cy="319.0886571056062"
+                            r="2.5"/>
+                    <desc class="value">16759</desc>
+                    <desc class="x top">21.423076923076923</desc>
+                    <desc class="y top">319.0886571056062</desc>
+                    <desc class="x_label">00:04:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="29.416762342135474" cy="318.2368535419383"
+                            r="2.5"/>
+                    <desc class="value">16843</desc>
+                    <desc class="x top">29.416762342135474</desc>
+                    <desc class="y top">318.2368535419383</desc>
+                    <desc class="x_label">00:15:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="37.41044776119403" cy="317.7298276111835" r="2.5"/>
+                    <desc class="value">16893</desc>
+                    <desc class="x top">37.41044776119403</desc>
+                    <desc class="y top">317.7298276111835</desc>
+                    <desc class="x_label">00:25:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="45.40413318025258" cy="316.8070404172099" r="2.5"/>
+                    <desc class="value">16984</desc>
+                    <desc class="x top">45.40413318025258</desc>
+                    <desc class="y top">316.8070404172099</desc>
+                    <desc class="x_label">00:36:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="53.39781859931114" cy="316.705635231059" r="2.5"/>
+                    <desc class="value">16994</desc>
+                    <desc class="x top">53.39781859931114</desc>
+                    <desc class="y top">316.705635231059</desc>
+                    <desc class="x_label">00:46:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="61.391504018369695" cy="316.6346516007533"
+                            r="2.5"/>
+                    <desc class="value">17001</desc>
+                    <desc class="x top">61.391504018369695</desc>
+                    <desc class="y top">316.6346516007533</desc>
+                    <desc class="x_label">00:57:25</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="69.38518943742824" cy="316.5940895262929" r="2.5"/>
+                    <desc class="value">17005</desc>
+                    <desc class="x top">69.38518943742824</desc>
+                    <desc class="y top">316.5940895262929</desc>
+                    <desc class="x_label">01:07:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="77.3788748564868" cy="316.50282485875704" r="2.5"/>
+                    <desc class="value">17014</desc>
+                    <desc class="x top">77.3788748564868</desc>
+                    <desc class="y top">316.50282485875704</desc>
+                    <desc class="x_label">01:18:30</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="85.37256027554534" cy="316.4014196726061" r="2.5"/>
+                    <desc class="value">17024</desc>
+                    <desc class="x top">85.37256027554534</desc>
+                    <desc class="y top">316.4014196726061</desc>
+                    <desc class="x_label">01:29:02</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="93.3662456946039" cy="316.3709981167608" r="2.5"/>
+                    <desc class="value">17027</desc>
+                    <desc class="x top">93.3662456946039</desc>
+                    <desc class="y top">316.3709981167608</desc>
+                    <desc class="x_label">01:39:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="101.35993111366244" cy="316.3709981167608"
+                            r="2.5"/>
+                    <desc class="value">17027</desc>
+                    <desc class="x top">101.35993111366244</desc>
+                    <desc class="y top">316.3709981167608</desc>
+                    <desc class="x_label">01:50:04</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="109.353616532721" cy="316.3709981167608" r="2.5"/>
+                    <desc class="value">17027</desc>
+                    <desc class="x top">109.353616532721</desc>
+                    <desc class="y top">316.3709981167608</desc>
+                    <desc class="x_label">02:00:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="117.34730195177956" cy="316.26959293060986"
+                            r="2.5"/>
+                    <desc class="value">17037</desc>
+                    <desc class="x top">117.34730195177956</desc>
+                    <desc class="y top">316.26959293060986</desc>
+                    <desc class="x_label">02:11:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="125.34098737083814" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">125.34098737083814</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">02:21:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="133.33467278989664" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">133.33467278989664</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">02:32:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="141.32835820895522" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">141.32835820895522</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">02:42:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="149.32204362801377" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">149.32204362801377</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">02:53:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="157.31572904707232" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">157.31572904707232</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">03:15:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="165.30941446613087" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">165.30941446613087</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">03:25:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="173.30309988518943" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">173.30309988518943</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">03:36:09</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="181.29678530424798" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">181.29678530424798</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">03:46:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="189.29047072330656" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">189.29047072330656</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">03:57:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="197.2841561423651" cy="316.1681877444589" r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">197.2841561423651</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">04:07:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="205.27784156142363" cy="316.1681877444589"
+                            r="2.5"/>
+                    <desc class="value">17047</desc>
+                    <desc class="x top">205.27784156142363</desc>
+                    <desc class="y top">316.1681877444589</desc>
+                    <desc class="x_label">04:18:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="213.27152698048215" cy="316.08706359553815"
+                            r="2.5"/>
+                    <desc class="value">17055</desc>
+                    <desc class="x top">213.27152698048215</desc>
+                    <desc class="y top">316.08706359553815</desc>
+                    <desc class="x_label">04:28:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="221.26521239954073" cy="316.0769230769231"
+                            r="2.5"/>
+                    <desc class="value">17056</desc>
+                    <desc class="x top">221.26521239954073</desc>
+                    <desc class="y top">316.0769230769231</desc>
+                    <desc class="x_label">04:39:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="229.25889781859928" cy="316.0769230769231"
+                            r="2.5"/>
+                    <desc class="value">17056</desc>
+                    <desc class="x top">229.25889781859928</desc>
+                    <desc class="y top">316.0769230769231</desc>
+                    <desc class="x_label">04:49:53</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="237.25258323765783" cy="316.0769230769231"
+                            r="2.5"/>
+                    <desc class="value">17056</desc>
+                    <desc class="x top">237.25258323765783</desc>
+                    <desc class="y top">316.0769230769231</desc>
+                    <desc class="x_label">05:00:24</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="245.24626865671638" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">245.24626865671638</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">05:10:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="253.23995407577496" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">253.23995407577496</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">05:21:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="261.2336394948335" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">261.2336394948335</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">05:31:59</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="269.2273249138921" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">269.2273249138921</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">05:42:30</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="277.2210103329506" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">277.2210103329506</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">05:53:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="285.2146957520092" cy="316.02622048384757"
+                            r="2.5"/>
+                    <desc class="value">17061</desc>
+                    <desc class="x top">285.2146957520092</desc>
+                    <desc class="y top">316.02622048384757</desc>
+                    <desc class="x_label">06:03:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="293.20838117106774" cy="315.76256699985515"
+                            r="2.5"/>
+                    <desc class="value">17087</desc>
+                    <desc class="x top">293.20838117106774</desc>
+                    <desc class="y top">315.76256699985515</desc>
+                    <desc class="x_label">06:14:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="301.2020665901263" cy="315.5191945530928" r="2.5"/>
+                    <desc class="value">17111</desc>
+                    <desc class="x top">301.2020665901263</desc>
+                    <desc class="y top">315.5191945530928</desc>
+                    <desc class="x_label">06:24:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="309.19575200918484" cy="314.5254237288135"
+                            r="2.5"/>
+                    <desc class="value">17209</desc>
+                    <desc class="x top">309.19575200918484</desc>
+                    <desc class="y top">314.5254237288135</desc>
+                    <desc class="x_label">06:35:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="317.1894374282435" cy="312.5074605244097" r="2.5"/>
+                    <desc class="value">17408</desc>
+                    <desc class="x top">317.1894374282435</desc>
+                    <desc class="y top">312.5074605244097</desc>
+                    <desc class="x_label">06:45:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="325.18312284730195" cy="310.41851368970015"
+                            r="2.5"/>
+                    <desc class="value">17614</desc>
+                    <desc class="x top">325.18312284730195</desc>
+                    <desc class="y top">310.41851368970015</desc>
+                    <desc class="x_label">06:56:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="333.17680826636047" cy="309.4348833840359"
+                            r="2.5"/>
+                    <desc class="value">17711</desc>
+                    <desc class="x top">333.17680826636047</desc>
+                    <desc class="y top">309.4348833840359</desc>
+                    <desc class="x_label">07:06:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="341.17049368541905" cy="308.9785600463566"
+                            r="2.5"/>
+                    <desc class="value">17756</desc>
+                    <desc class="x top">341.17049368541905</desc>
+                    <desc class="y top">308.9785600463566</desc>
+                    <desc class="x_label">07:17:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="349.16417910447757" cy="308.70476604374903"
+                            r="2.5"/>
+                    <desc class="value">17783</desc>
+                    <desc class="x top">349.16417910447757</desc>
+                    <desc class="y top">308.70476604374903</desc>
+                    <desc class="x_label">07:27:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="357.1578645235362" cy="307.84282196146603"
+                            r="2.5"/>
+                    <desc class="value">17868</desc>
+                    <desc class="x top">357.1578645235362</desc>
+                    <desc class="y top">307.84282196146603</desc>
+                    <desc class="x_label">07:38:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="365.15154994259467" cy="307.0214399536433"
+                            r="2.5"/>
+                    <desc class="value">17949</desc>
+                    <desc class="x top">365.15154994259467</desc>
+                    <desc class="y top">307.0214399536433</desc>
+                    <desc class="x_label">07:48:51</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="373.1452353616533" cy="304.851368970013" r="2.5"/>
+                    <desc class="value">18163</desc>
+                    <desc class="x top">373.1452353616533</desc>
+                    <desc class="y top">304.851368970013</desc>
+                    <desc class="x_label">07:59:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="381.1389207807118" cy="303.43169636389973"
+                            r="2.5"/>
+                    <desc class="value">18303</desc>
+                    <desc class="x top">381.1389207807118</desc>
+                    <desc class="y top">303.43169636389973</desc>
+                    <desc class="x_label">08:09:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="389.1326061997704" cy="297.6211791974504" r="2.5"/>
+                    <desc class="value">18876</desc>
+                    <desc class="x top">389.1326061997704</desc>
+                    <desc class="y top">297.6211791974504</desc>
+                    <desc class="x_label">08:20:27</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="397.12629161882893" cy="294.9643633202955"
+                            r="2.5"/>
+                    <desc class="value">19138</desc>
+                    <desc class="x top">397.12629161882893</desc>
+                    <desc class="y top">294.9643633202955</desc>
+                    <desc class="x_label">08:31:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="405.1199770378875" cy="293.1390699695784" r="2.5"/>
+                    <desc class="value">19318</desc>
+                    <desc class="x top">405.1199770378875</desc>
+                    <desc class="y top">293.1390699695784</desc>
+                    <desc class="x_label">08:41:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="413.11366245694603" cy="289.7419962335216"
+                            r="2.5"/>
+                    <desc class="value">19653</desc>
+                    <desc class="x top">413.11366245694603</desc>
+                    <desc class="y top">289.7419962335216</desc>
+                    <desc class="x_label">08:52:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="421.1073478760046" cy="287.06489931913654"
+                            r="2.5"/>
+                    <desc class="value">19917</desc>
+                    <desc class="x top">421.1073478760046</desc>
+                    <desc class="y top">287.06489931913654</desc>
+                    <desc class="x_label">09:02:38</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="429.10103329506313" cy="285.0063740402723"
+                            r="2.5"/>
+                    <desc class="value">20120</desc>
+                    <desc class="x top">429.10103329506313</desc>
+                    <desc class="y top">285.0063740402723</desc>
+                    <desc class="x_label">09:13:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="437.0947187141217" cy="283.4548746921628" r="2.5"/>
+                    <desc class="value">20273</desc>
+                    <desc class="x top">437.0947187141217</desc>
+                    <desc class="y top">283.4548746921628</desc>
+                    <desc class="x_label">09:23:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="445.08840413318023" cy="281.08199333623054"
+                            r="2.5"/>
+                    <desc class="value">20507</desc>
+                    <desc class="x top">445.08840413318023</desc>
+                    <desc class="y top">281.08199333623054</desc>
+                    <desc class="x_label">09:34:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="453.0820895522388" cy="277.67477908155865"
+                            r="2.5"/>
+                    <desc class="value">20843</desc>
+                    <desc class="x top">453.0820895522388</desc>
+                    <desc class="y top">277.67477908155865</desc>
+                    <desc class="x_label">09:44:52</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="461.0757749712974" cy="275.1295089091699" r="2.5"/>
+                    <desc class="value">21094</desc>
+                    <desc class="x top">461.0757749712974</desc>
+                    <desc class="y top">275.1295089091699</desc>
+                    <desc class="x_label">09:55:25</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="469.0694603903559" cy="272.04679125018106"
+                            r="2.5"/>
+                    <desc class="value">21398</desc>
+                    <desc class="x top">469.0694603903559</desc>
+                    <desc class="y top">272.04679125018106</desc>
+                    <desc class="x_label">10:06:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="477.0631458094145" cy="265.5669998551354" r="2.5"/>
+                    <desc class="value">22037</desc>
+                    <desc class="x top">477.0631458094145</desc>
+                    <desc class="y top">265.5669998551354</desc>
+                    <desc class="x_label">10:16:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="485.05683122847296" cy="261.74402433724464"
+                            r="2.5"/>
+                    <desc class="value">22414</desc>
+                    <desc class="x top">485.05683122847296</desc>
+                    <desc class="y top">261.74402433724464</desc>
+                    <desc class="x_label">10:27:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="493.0505166475316" cy="258.81341445748217"
+                            r="2.5"/>
+                    <desc class="value">22703</desc>
+                    <desc class="x top">493.0505166475316</desc>
+                    <desc class="y top">258.81341445748217</desc>
+                    <desc class="x_label">10:37:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="501.0442020665901" cy="250.77198319571195"
+                            r="2.5"/>
+                    <desc class="value">23496</desc>
+                    <desc class="x top">501.0442020665901</desc>
+                    <desc class="y top">250.77198319571195</desc>
+                    <desc class="x_label">10:48:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="509.03788748564864" cy="245.55975662755318"
+                            r="2.5"/>
+                    <desc class="value">24010</desc>
+                    <desc class="x top">509.03788748564864</desc>
+                    <desc class="y top">245.55975662755318</desc>
+                    <desc class="x_label">10:58:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="517.0315729047072" cy="241.44270606982465"
+                            r="2.5"/>
+                    <desc class="value">24416</desc>
+                    <desc class="x top">517.0315729047072</desc>
+                    <desc class="y top">241.44270606982465</desc>
+                    <desc class="x_label">11:09:29</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="525.0252583237658" cy="237.9847892220773" r="2.5"/>
+                    <desc class="value">24757</desc>
+                    <desc class="x ">525.0252583237658</desc>
+                    <desc class="y ">237.9847892220773</desc>
+                    <desc class="x_label">11:20:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="533.0189437428243" cy="234.4153266695639" r="2.5"/>
+                    <desc class="value">25109</desc>
+                    <desc class="x ">533.0189437428243</desc>
+                    <desc class="y ">234.4153266695639</desc>
+                    <desc class="x_label">11:30:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="541.0126291618828" cy="230.0751847023033" r="2.5"/>
+                    <desc class="value">25537</desc>
+                    <desc class="x ">541.0126291618828</desc>
+                    <desc class="y ">230.0751847023033</desc>
+                    <desc class="x_label">11:41:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="549.0063145809414" cy="227.14457482254087"
+                            r="2.5"/>
+                    <desc class="value">25826</desc>
+                    <desc class="x ">549.0063145809414</desc>
+                    <desc class="y ">227.14457482254087</desc>
+                    <desc class="x_label">11:51:39</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="557.0" cy="224.22410546139355" r="2.5"/>
+                    <desc class="value">26114</desc>
+                    <desc class="x ">557.0</desc>
+                    <desc class="y ">224.22410546139355</desc>
+                    <desc class="x_label">12:02:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="564.9936854190586" cy="219.85354193828766"
+                            r="2.5"/>
+                    <desc class="value">26545</desc>
+                    <desc class="x left">564.9936854190586</desc>
+                    <desc class="y left">219.85354193828766</desc>
+                    <desc class="x_label">12:12:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="572.9873708381172" cy="215.82775604809495"
+                            r="2.5"/>
+                    <desc class="value">26942</desc>
+                    <desc class="x left">572.9873708381172</desc>
+                    <desc class="y left">215.82775604809495</desc>
+                    <desc class="x_label">12:23:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="580.9810562571756" cy="212.13660727220042"
+                            r="2.5"/>
+                    <desc class="value">27306</desc>
+                    <desc class="x left">580.9810562571756</desc>
+                    <desc class="y left">212.13660727220042</desc>
+                    <desc class="x_label">12:33:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="588.9747416762342" cy="208.55700420107195"
+                            r="2.5"/>
+                    <desc class="value">27659</desc>
+                    <desc class="x left">588.9747416762342</desc>
+                    <desc class="y left">208.55700420107195</desc>
+                    <desc class="x_label">12:44:29</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="596.9684270952928" cy="204.3486889758076" r="2.5"/>
+                    <desc class="value">28074</desc>
+                    <desc class="x left">596.9684270952928</desc>
+                    <desc class="y left">204.3486889758076</desc>
+                    <desc class="x_label">12:55:02</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="604.9621125143514" cy="199.42039692887147"
+                            r="2.5"/>
+                    <desc class="value">28560</desc>
+                    <desc class="x left">604.9621125143514</desc>
+                    <desc class="y left">199.42039692887147</desc>
+                    <desc class="x_label">13:05:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="612.9557979334099" cy="196.49992756772411"
+                            r="2.5"/>
+                    <desc class="value">28848</desc>
+                    <desc class="x left">612.9557979334099</desc>
+                    <desc class="y left">196.49992756772411</desc>
+                    <desc class="x_label">13:16:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="620.9494833524683" cy="193.77212806026358"
+                            r="2.5"/>
+                    <desc class="value">29117</desc>
+                    <desc class="x left">620.9494833524683</desc>
+                    <desc class="y left">193.77212806026358</desc>
+                    <desc class="x_label">13:26:42</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="628.943168771527" cy="190.47645951035776" r="2.5"/>
+                    <desc class="value">29442</desc>
+                    <desc class="x left">628.943168771527</desc>
+                    <desc class="y left">190.47645951035776</desc>
+                    <desc class="x_label">13:37:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="636.9368541905856" cy="187.6269737795161" r="2.5"/>
+                    <desc class="value">29723</desc>
+                    <desc class="x left">636.9368541905856</desc>
+                    <desc class="y left">187.6269737795161</desc>
+                    <desc class="x_label">13:47:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="644.9305396096441" cy="185.53802694480652"
+                            r="2.5"/>
+                    <desc class="value">29929</desc>
+                    <desc class="x left">644.9305396096441</desc>
+                    <desc class="y left">185.53802694480652</desc>
+                    <desc class="x_label">13:58:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="652.9242250287026" cy="181.45139794292328"
+                            r="2.5"/>
+                    <desc class="value">30332</desc>
+                    <desc class="x left">652.9242250287026</desc>
+                    <desc class="y left">181.45139794292328</desc>
+                    <desc class="x_label">14:08:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="660.9179104477611" cy="177.42561205273063"
+                            r="2.5"/>
+                    <desc class="value">30729</desc>
+                    <desc class="x left">660.9179104477611</desc>
+                    <desc class="y left">177.42561205273063</desc>
+                    <desc class="x_label">14:19:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="668.9115958668198" cy="172.68998985948133"
+                            r="2.5"/>
+                    <desc class="value">31196</desc>
+                    <desc class="x left">668.9115958668198</desc>
+                    <desc class="y left">172.68998985948133</desc>
+                    <desc class="x_label">14:30:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="676.9052812858782" cy="164.79052585832238"
+                            r="2.5"/>
+                    <desc class="value">31975</desc>
+                    <desc class="x left">676.9052812858782</desc>
+                    <desc class="y left">164.79052585832238</desc>
+                    <desc class="x_label">14:40:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="684.8989667049368" cy="158.92930609879755"
+                            r="2.5"/>
+                    <desc class="value">32553</desc>
+                    <desc class="x left">684.8989667049368</desc>
+                    <desc class="y left">158.92930609879755</desc>
+                    <desc class="x_label">14:51:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="692.8926521239954" cy="155.95813414457479"
+                            r="2.5"/>
+                    <desc class="value">32846</desc>
+                    <desc class="x left">692.8926521239954</desc>
+                    <desc class="y left">155.95813414457479</desc>
+                    <desc class="x_label">15:01:41</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="700.8863375430541" cy="152.76387078081984"
+                            r="2.5"/>
+                    <desc class="value">33161</desc>
+                    <desc class="x left">700.8863375430541</desc>
+                    <desc class="y left">152.76387078081984</desc>
+                    <desc class="x_label">15:12:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="708.8800229621124" cy="150.56337824134425"
+                            r="2.5"/>
+                    <desc class="value">33378</desc>
+                    <desc class="x left">708.8800229621124</desc>
+                    <desc class="y left">150.56337824134425</desc>
+                    <desc class="x_label">15:22:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="716.873708381171" cy="145.5336810082572" r="2.5"/>
+                    <desc class="value">33874</desc>
+                    <desc class="x left">716.873708381171</desc>
+                    <desc class="y left">145.5336810082572</desc>
+                    <desc class="x_label">15:33:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="724.8673938002296" cy="142.40026075619295"
+                            r="2.5"/>
+                    <desc class="value">34183</desc>
+                    <desc class="x left">724.8673938002296</desc>
+                    <desc class="y left">142.40026075619295</desc>
+                    <desc class="x_label">15:43:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="732.8610792192883" cy="140.1186440677966" r="2.5"/>
+                    <desc class="value">34408</desc>
+                    <desc class="x left">732.8610792192883</desc>
+                    <desc class="y left">140.1186440677966</desc>
+                    <desc class="x_label">15:54:32</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="740.8547646383468" cy="138.78009561060406"
+                            r="2.5"/>
+                    <desc class="value">34540</desc>
+                    <desc class="x left">740.8547646383468</desc>
+                    <desc class="y left">138.78009561060406</desc>
+                    <desc class="x_label">16:05:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="748.8484500574052" cy="130.32290308561494"
+                            r="2.5"/>
+                    <desc class="value">35374</desc>
+                    <desc class="x left">748.8484500574052</desc>
+                    <desc class="y left">130.32290308561494</desc>
+                    <desc class="x_label">16:15:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="756.8421354764638" cy="126.62161379110529"
+                            r="2.5"/>
+                    <desc class="value">35739</desc>
+                    <desc class="x left">756.8421354764638</desc>
+                    <desc class="y left">126.62161379110529</desc>
+                    <desc class="x_label">16:26:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="764.8358208955224" cy="123.7822685788787" r="2.5"/>
+                    <desc class="value">36019</desc>
+                    <desc class="x left">764.8358208955224</desc>
+                    <desc class="y left">123.7822685788787</desc>
+                    <desc class="x_label">16:36:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="772.829506314581" cy="120.52716210343328" r="2.5"/>
+                    <desc class="value">36340</desc>
+                    <desc class="x left">772.829506314581</desc>
+                    <desc class="y left">120.52716210343328</desc>
+                    <desc class="x_label">16:47:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="780.8231917336395" cy="117.20107199768216"
+                            r="2.5"/>
+                    <desc class="value">36668</desc>
+                    <desc class="x left">780.8231917336395</desc>
+                    <desc class="y left">117.20107199768216</desc>
+                    <desc class="x_label">16:57:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="788.816877152698" cy="113.35781544256116" r="2.5"/>
+                    <desc class="value">37047</desc>
+                    <desc class="x left">788.816877152698</desc>
+                    <desc class="y left">113.35781544256116</desc>
+                    <desc class="x_label">17:08:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="796.8105625717566" cy="110.34608141387798"
+                            r="2.5"/>
+                    <desc class="value">37344</desc>
+                    <desc class="x left">796.8105625717566</desc>
+                    <desc class="y left">110.34608141387798</desc>
+                    <desc class="x_label">17:19:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="804.8042479908152" cy="108.24699406055333"
+                            r="2.5"/>
+                    <desc class="value">37551</desc>
+                    <desc class="x left">804.8042479908152</desc>
+                    <desc class="y left">108.24699406055333</desc>
+                    <desc class="x_label">17:29:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="812.7979334098737" cy="105.14399536433433"
+                            r="2.5"/>
+                    <desc class="value">37857</desc>
+                    <desc class="x left">812.7979334098737</desc>
+                    <desc class="y left">105.14399536433433</desc>
+                    <desc class="x_label">17:40:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="820.7916188289323" cy="99.28277560480944" r="2.5"/>
+                    <desc class="value">38435</desc>
+                    <desc class="x left">820.7916188289323</desc>
+                    <desc class="y left">99.28277560480944</desc>
+                    <desc class="x_label">17:50:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="828.7853042479907" cy="94.50659133709979" r="2.5"/>
+                    <desc class="value">38906</desc>
+                    <desc class="x left">828.7853042479907</desc>
+                    <desc class="y left">94.50659133709979</desc>
+                    <desc class="x_label">18:01:36</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="836.7789896670494" cy="90.72417789366938" r="2.5"/>
+                    <desc class="value">39279</desc>
+                    <desc class="x left">836.7789896670494</desc>
+                    <desc class="y left">90.72417789366938</desc>
+                    <desc class="x_label">18:12:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="844.7726750861079" cy="88.86846298710702" r="2.5"/>
+                    <desc class="value">39462</desc>
+                    <desc class="x left">844.7726750861079</desc>
+                    <desc class="y left">88.86846298710702</desc>
+                    <desc class="x_label">18:22:48</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="852.7663605051664" cy="86.65782992901632" r="2.5"/>
+                    <desc class="value">39680</desc>
+                    <desc class="x left">852.7663605051664</desc>
+                    <desc class="y left">86.65782992901632</desc>
+                    <desc class="x_label">18:33:20</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="860.7600459242251" cy="81.9830508474576" r="2.5"/>
+                    <desc class="value">40141</desc>
+                    <desc class="x left">860.7600459242251</desc>
+                    <desc class="y left">81.9830508474576</desc>
+                    <desc class="x_label">18:43:53</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="868.7537313432836" cy="76.34492249746484" r="2.5"/>
+                    <desc class="value">40697</desc>
+                    <desc class="x left">868.7537313432836</desc>
+                    <desc class="y left">76.34492249746484</desc>
+                    <desc class="x_label">18:54:26</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="876.7474167623421" cy="74.60075329566854" r="2.5"/>
+                    <desc class="value">40869</desc>
+                    <desc class="x left">876.7474167623421</desc>
+                    <desc class="y left">74.60075329566854</desc>
+                    <desc class="x_label">19:04:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="884.7411021814006" cy="68.75981457337389" r="2.5"/>
+                    <desc class="value">41445</desc>
+                    <desc class="x left">884.7411021814006</desc>
+                    <desc class="y left">68.75981457337389</desc>
+                    <desc class="x_label">19:15:36</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="892.7347876004592" cy="64.17630015935094" r="2.5"/>
+                    <desc class="value">41897</desc>
+                    <desc class="x left">892.7347876004592</desc>
+                    <desc class="y left">64.17630015935094</desc>
+                    <desc class="x_label">19:26:09</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="900.7284730195179" cy="60.890772128060235"
+                            r="2.5"/>
+                    <desc class="value">42221</desc>
+                    <desc class="x left">900.7284730195179</desc>
+                    <desc class="y left">60.890772128060235</desc>
+                    <desc class="x_label">19:36:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="908.7221584385763" cy="56.30725771403735" r="2.5"/>
+                    <desc class="value">42673</desc>
+                    <desc class="x left">908.7221584385763</desc>
+                    <desc class="y left">56.30725771403735</desc>
+                    <desc class="x_label">19:47:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="916.7158438576348" cy="51.56149500217293" r="2.5"/>
+                    <desc class="value">43141</desc>
+                    <desc class="x left">916.7158438576348</desc>
+                    <desc class="y left">51.56149500217293</desc>
+                    <desc class="x_label">19:57:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="924.7095292766934" cy="49.57395335361434" r="2.5"/>
+                    <desc class="value">43337</desc>
+                    <desc class="x left">924.7095292766934</desc>
+                    <desc class="y left">49.57395335361434</desc>
+                    <desc class="x_label">20:08:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="932.7032146957521" cy="46.70418658554246" r="2.5"/>
+                    <desc class="value">43620</desc>
+                    <desc class="x left">932.7032146957521</desc>
+                    <desc class="y left">46.70418658554246</desc>
+                    <desc class="x_label">20:18:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="940.6969001148105" cy="44.20961900622916" r="2.5"/>
+                    <desc class="value">43866</desc>
+                    <desc class="x left">940.6969001148105</desc>
+                    <desc class="y left">44.20961900622916</desc>
+                    <desc class="x_label">20:29:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="948.690585533869" cy="39.423294219904335" r="2.5"/>
+                    <desc class="value">44338</desc>
+                    <desc class="x left">948.690585533869</desc>
+                    <desc class="y left">39.423294219904335</desc>
+                    <desc class="x_label">20:40:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="956.6842709529276" cy="35.934955816311685"
+                            r="2.5"/>
+                    <desc class="value">44682</desc>
+                    <desc class="x left">956.6842709529276</desc>
+                    <desc class="y left">35.934955816311685</desc>
+                    <desc class="x_label">20:50:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="964.6779563719863" cy="31.310879327828445"
+                            r="2.5"/>
+                    <desc class="value">45138</desc>
+                    <desc class="x left">964.6779563719863</desc>
+                    <desc class="y left">31.310879327828445</desc>
+                    <desc class="x_label">21:01:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="972.6716417910447" cy="28.258583224684855"
+                            r="2.5"/>
+                    <desc class="value">45439</desc>
+                    <desc class="x left">972.6716417910447</desc>
+                    <desc class="y left">28.258583224684855</desc>
+                    <desc class="x_label">21:11:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="980.6653272101033" cy="26.717224395190442"
+                            r="2.5"/>
+                    <desc class="value">45591</desc>
+                    <desc class="x left">980.6653272101033</desc>
+                    <desc class="y left">26.717224395190442</desc>
+                    <desc class="x_label">21:22:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="988.659012629162" cy="24.45588874402432" r="2.5"/>
+                    <desc class="value">45814</desc>
+                    <desc class="x left">988.659012629162</desc>
+                    <desc class="y left">24.45588874402432</desc>
+                    <desc class="x_label">21:32:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="996.6526980482205" cy="22.316239316239262"
+                            r="2.5"/>
+                    <desc class="value">46025</desc>
+                    <desc class="x left">996.6526980482205</desc>
+                    <desc class="y left">22.316239316239262</desc>
+                    <desc class="x_label">21:43:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1004.6463834672788" cy="20.906707228741084"
+                            r="2.5"/>
+                    <desc class="value">46164</desc>
+                    <desc class="x left">1004.6463834672788</desc>
+                    <desc class="y left">20.906707228741084</desc>
+                    <desc class="x_label">21:53:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1012.6400688863375" cy="19.284224250325906"
+                            r="2.5"/>
+                    <desc class="value">46324</desc>
+                    <desc class="x left">1012.6400688863375</desc>
+                    <desc class="y left">19.284224250325906</desc>
+                    <desc class="x_label">22:04:24</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1020.6337543053962" cy="17.27640156453714"
+                            r="2.5"/>
+                    <desc class="value">46522</desc>
+                    <desc class="x left">1020.6337543053962</desc>
+                    <desc class="y left">17.27640156453714</desc>
+                    <desc class="x_label">22:15:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1028.6274397244547" cy="15.937853107344608"
+                            r="2.5"/>
+                    <desc class="value">46654</desc>
+                    <desc class="x left">1028.6274397244547</desc>
+                    <desc class="y left">15.937853107344608</desc>
+                    <desc class="x_label">22:25:34</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1036.6211251435132" cy="14.873098652759609"
+                            r="2.5"/>
+                    <desc class="value">46759</desc>
+                    <desc class="x left">1036.6211251435132</desc>
+                    <desc class="y left">14.873098652759609</desc>
+                    <desc class="x_label">22:36:07</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1044.6148105625716" cy="13.45342604664637"
+                            r="2.5"/>
+                    <desc class="value">46899</desc>
+                    <desc class="x left">1044.6148105625716</desc>
+                    <desc class="y left">13.45342604664637</desc>
+                    <desc class="x_label">22:46:39</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1052.6084959816303" cy="12.419093147906665"
+                            r="2.5"/>
+                    <desc class="value">47001</desc>
+                    <desc class="x left">1052.6084959816303</desc>
+                    <desc class="y left">12.419093147906665</desc>
+                    <desc class="x_label">22:57:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1060.6021814006888" cy="12.206142256989665"
+                            r="2.5"/>
+                    <desc class="value">47022</desc>
+                    <desc class="x left">1060.6021814006888</desc>
+                    <desc class="y left">12.206142256989665</desc>
+                    <desc class="x_label">23:07:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1068.5958668197475" cy="10.968998985948076"
+                            r="2.5"/>
+                    <desc class="value">47144</desc>
+                    <desc class="x left">1068.5958668197475</desc>
+                    <desc class="y left">10.968998985948076</desc>
+                    <desc class="x_label">23:18:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1076.589552238806" cy="10.431551499348075"
+                            r="2.5"/>
+                    <desc class="value">47197</desc>
+                    <desc class="x left">1076.589552238806</desc>
+                    <desc class="y left">10.431551499348075</desc>
+                    <desc class="x_label">23:28:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1084.5832376578644" cy="9.762277270751781"
+                            r="2.5"/>
+                    <desc class="value">47263</desc>
+                    <desc class="x left">1084.5832376578644</desc>
+                    <desc class="y left">9.762277270751781</desc>
+                    <desc class="x_label">23:39:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1092.576923076923" cy="9.153846153846132" r="2.5"/>
+                    <desc class="value">47323</desc>
+                    <desc class="x left">1092.576923076923</desc>
+                    <desc class="y left">9.153846153846132</desc>
+                    <desc class="x_label">23:49:54</desc>
+                </g>
+            </g>
+            <g class="series serie-1 color-1">
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="21.423076923076923" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">21.423076923076923</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:04:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="29.416762342135474" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">29.416762342135474</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:15:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="37.41044776119403" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">37.41044776119403</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:25:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="45.40413318025258" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">45.40413318025258</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:36:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="53.39781859931114" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">53.39781859931114</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:46:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="61.391504018369695" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">61.391504018369695</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">00:57:25</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="69.38518943742824" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">69.38518943742824</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">01:07:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="77.3788748564868" cy="466.84615384615387" r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">77.3788748564868</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">01:18:30</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="85.37256027554534" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">85.37256027554534</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">01:29:02</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="93.3662456946039" cy="466.84615384615387" r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">93.3662456946039</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">01:39:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="101.35993111366244" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">101.35993111366244</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">01:50:04</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="109.353616532721" cy="466.84615384615387" r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">109.353616532721</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:00:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="117.34730195177956" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">117.34730195177956</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:11:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="125.34098737083814" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">125.34098737083814</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:21:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="133.33467278989664" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">133.33467278989664</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:32:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="141.32835820895522" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">141.32835820895522</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:42:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="149.32204362801377" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">149.32204362801377</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">02:53:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="157.31572904707232" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">157.31572904707232</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">03:15:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="165.30941446613087" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">165.30941446613087</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">03:25:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="173.30309988518943" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">173.30309988518943</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">03:36:09</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="181.29678530424798" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">181.29678530424798</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">03:46:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="189.29047072330656" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">189.29047072330656</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">03:57:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="197.2841561423651" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">197.2841561423651</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">04:07:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="205.27784156142363" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">205.27784156142363</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">04:18:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="213.27152698048215" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">213.27152698048215</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">04:28:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="221.26521239954073" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">221.26521239954073</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">04:39:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="229.25889781859928" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">229.25889781859928</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">04:49:53</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="237.25258323765783" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">237.25258323765783</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:00:24</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="245.24626865671638" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">245.24626865671638</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:10:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="253.23995407577496" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">253.23995407577496</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:21:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="261.2336394948335" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">261.2336394948335</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:31:59</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="269.2273249138921" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">269.2273249138921</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:42:30</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="277.2210103329506" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">277.2210103329506</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">05:53:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="285.2146957520092" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">285.2146957520092</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:03:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="293.20838117106774" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">293.20838117106774</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:14:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="301.2020665901263" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">301.2020665901263</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:24:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="309.19575200918484" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">309.19575200918484</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:35:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="317.1894374282435" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">317.1894374282435</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:45:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="325.18312284730195" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">325.18312284730195</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">06:56:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="333.17680826636047" cy="466.84615384615387"
+                            r="2.5"/>
+                    <desc class="value">2188</desc>
+                    <desc class="x top">333.17680826636047</desc>
+                    <desc class="y top">466.84615384615387</desc>
+                    <desc class="x_label">07:06:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="341.17049368541905" cy="466.7650296972331"
+                            r="2.5"/>
+                    <desc class="value">2196</desc>
+                    <desc class="x top">341.17049368541905</desc>
+                    <desc class="y top">466.7650296972331</desc>
+                    <desc class="x_label">07:17:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="349.16417910447757" cy="466.754889178618" r="2.5"/>
+                    <desc class="value">2197</desc>
+                    <desc class="x top">349.16417910447757</desc>
+                    <desc class="y top">466.754889178618</desc>
+                    <desc class="x_label">07:27:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="357.1578645235362" cy="466.754889178618" r="2.5"/>
+                    <desc class="value">2197</desc>
+                    <desc class="x top">357.1578645235362</desc>
+                    <desc class="y top">466.754889178618</desc>
+                    <desc class="x_label">07:38:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="365.15154994259467" cy="466.65348399246705"
+                            r="2.5"/>
+                    <desc class="value">2207</desc>
+                    <desc class="x top">365.15154994259467</desc>
+                    <desc class="y top">466.65348399246705</desc>
+                    <desc class="x_label">07:48:51</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="373.1452353616533" cy="466.6433434738519" r="2.5"/>
+                    <desc class="value">2208</desc>
+                    <desc class="x top">373.1452353616533</desc>
+                    <desc class="y top">466.6433434738519</desc>
+                    <desc class="x_label">07:59:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="381.1389207807118" cy="466.6433434738519" r="2.5"/>
+                    <desc class="value">2208</desc>
+                    <desc class="x top">381.1389207807118</desc>
+                    <desc class="y top">466.6433434738519</desc>
+                    <desc class="x_label">08:09:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="389.1326061997704" cy="466.62306243662175"
+                            r="2.5"/>
+                    <desc class="value">2210</desc>
+                    <desc class="x top">389.1326061997704</desc>
+                    <desc class="y top">466.62306243662175</desc>
+                    <desc class="x_label">08:20:27</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="397.12629161882893" cy="466.45067362016516"
+                            r="2.5"/>
+                    <desc class="value">2227</desc>
+                    <desc class="x top">397.12629161882893</desc>
+                    <desc class="y top">466.45067362016516</desc>
+                    <desc class="x_label">08:31:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="405.1199770378875" cy="466.28842532232363"
+                            r="2.5"/>
+                    <desc class="value">2243</desc>
+                    <desc class="x top">405.1199770378875</desc>
+                    <desc class="y top">466.28842532232363</desc>
+                    <desc class="x_label">08:41:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="413.11366245694603" cy="465.9537882080255"
+                            r="2.5"/>
+                    <desc class="value">2276</desc>
+                    <desc class="x top">413.11366245694603</desc>
+                    <desc class="y top">465.9537882080255</desc>
+                    <desc class="x_label">08:52:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="421.1073478760046" cy="465.83210198464434"
+                            r="2.5"/>
+                    <desc class="value">2288</desc>
+                    <desc class="x top">421.1073478760046</desc>
+                    <desc class="y top">465.83210198464434</desc>
+                    <desc class="x_label">09:02:38</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="429.10103329506313" cy="465.7509778357236"
+                            r="2.5"/>
+                    <desc class="value">2296</desc>
+                    <desc class="x top">429.10103329506313</desc>
+                    <desc class="y top">465.7509778357236</desc>
+                    <desc class="x_label">09:13:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="437.0947187141217" cy="465.66985368680287"
+                            r="2.5"/>
+                    <desc class="value">2304</desc>
+                    <desc class="x top">437.0947187141217</desc>
+                    <desc class="y top">465.66985368680287</desc>
+                    <desc class="x_label">09:23:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="445.08840413318023" cy="465.3352165725047"
+                            r="2.5"/>
+                    <desc class="value">2337</desc>
+                    <desc class="x top">445.08840413318023</desc>
+                    <desc class="y top">465.3352165725047</desc>
+                    <desc class="x_label">09:34:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="453.0820895522388" cy="465.11212516297263"
+                            r="2.5"/>
+                    <desc class="value">2359</desc>
+                    <desc class="x top">453.0820895522388</desc>
+                    <desc class="y top">465.11212516297263</desc>
+                    <desc class="x_label">09:44:52</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="461.0757749712974" cy="464.90931479067075"
+                            r="2.5"/>
+                    <desc class="value">2379</desc>
+                    <desc class="x top">461.0757749712974</desc>
+                    <desc class="y top">464.90931479067075</desc>
+                    <desc class="x_label">09:55:25</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="469.0694603903559" cy="464.81805012313487"
+                            r="2.5"/>
+                    <desc class="value">2388</desc>
+                    <desc class="x top">469.0694603903559</desc>
+                    <desc class="y top">464.81805012313487</desc>
+                    <desc class="x_label">10:06:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="477.0631458094145" cy="464.7065044183688" r="2.5"/>
+                    <desc class="value">2399</desc>
+                    <desc class="x top">477.0631458094145</desc>
+                    <desc class="y top">464.7065044183688</desc>
+                    <desc class="x_label">10:16:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="485.05683122847296" cy="464.33130522961034"
+                            r="2.5"/>
+                    <desc class="value">2436</desc>
+                    <desc class="x top">485.05683122847296</desc>
+                    <desc class="y top">464.33130522961034</desc>
+                    <desc class="x_label">10:27:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="493.0505166475316" cy="464.11835433869334"
+                            r="2.5"/>
+                    <desc class="value">2457</desc>
+                    <desc class="x top">493.0505166475316</desc>
+                    <desc class="y top">464.11835433869334</desc>
+                    <desc class="x_label">10:37:46</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="501.0442020665901" cy="464.05751122700275"
+                            r="2.5"/>
+                    <desc class="value">2463</desc>
+                    <desc class="x top">501.0442020665901</desc>
+                    <desc class="y top">464.05751122700275</desc>
+                    <desc class="x_label">10:48:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="509.03788748564864" cy="464.04737070838763"
+                            r="2.5"/>
+                    <desc class="value">2464</desc>
+                    <desc class="x top">509.03788748564864</desc>
+                    <desc class="y top">464.04737070838763</desc>
+                    <desc class="x_label">10:58:54</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="517.0315729047072" cy="463.63160944516875"
+                            r="2.5"/>
+                    <desc class="value">2505</desc>
+                    <desc class="x top">517.0315729047072</desc>
+                    <desc class="y top">463.63160944516875</desc>
+                    <desc class="x_label">11:09:29</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="525.0252583237658" cy="463.438939591482" r="2.5"/>
+                    <desc class="value">2524</desc>
+                    <desc class="x top">525.0252583237658</desc>
+                    <desc class="y top">463.438939591482</desc>
+                    <desc class="x_label">11:20:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="533.0189437428243" cy="463.3983775170216" r="2.5"/>
+                    <desc class="value">2528</desc>
+                    <desc class="x top">533.0189437428243</desc>
+                    <desc class="y top">463.3983775170216</desc>
+                    <desc class="x_label">11:30:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="541.0126291618828" cy="463.337534405331" r="2.5"/>
+                    <desc class="value">2534</desc>
+                    <desc class="x top">541.0126291618828</desc>
+                    <desc class="y top">463.337534405331</desc>
+                    <desc class="x_label">11:41:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="549.0063145809414" cy="463.24626973779516"
+                            r="2.5"/>
+                    <desc class="value">2543</desc>
+                    <desc class="x top">549.0063145809414</desc>
+                    <desc class="y top">463.24626973779516</desc>
+                    <desc class="x_label">11:51:39</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="557.0" cy="463.23612921918004" r="2.5"/>
+                    <desc class="value">2544</desc>
+                    <desc class="x top">557.0</desc>
+                    <desc class="y top">463.23612921918004</desc>
+                    <desc class="x_label">12:02:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="564.9936854190586" cy="463.08402143995363"
+                            r="2.5"/>
+                    <desc class="value">2559</desc>
+                    <desc class="x left top">564.9936854190586</desc>
+                    <desc class="y left top">463.08402143995363</desc>
+                    <desc class="x_label">12:12:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="572.9873708381172" cy="463.08402143995363"
+                            r="2.5"/>
+                    <desc class="value">2559</desc>
+                    <desc class="x left top">572.9873708381172</desc>
+                    <desc class="y left top">463.08402143995363</desc>
+                    <desc class="x_label">12:23:21</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="580.9810562571756" cy="462.9521946979574" r="2.5"/>
+                    <desc class="value">2572</desc>
+                    <desc class="x left top">580.9810562571756</desc>
+                    <desc class="y left top">462.9521946979574</desc>
+                    <desc class="x_label">12:33:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="588.9747416762342" cy="462.7392438070404" r="2.5"/>
+                    <desc class="value">2593</desc>
+                    <desc class="x left top">588.9747416762342</desc>
+                    <desc class="y left top">462.7392438070404</desc>
+                    <desc class="x_label">12:44:29</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="596.9684270952928" cy="462.46544980443286"
+                            r="2.5"/>
+                    <desc class="value">2620</desc>
+                    <desc class="x left top">596.9684270952928</desc>
+                    <desc class="y left top">462.46544980443286</desc>
+                    <desc class="x_label">12:55:02</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="604.9621125143514" cy="462.1916558018253" r="2.5"/>
+                    <desc class="value">2647</desc>
+                    <desc class="x left top">604.9621125143514</desc>
+                    <desc class="y left top">462.1916558018253</desc>
+                    <desc class="x_label">13:05:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="612.9557979334099" cy="462.1916558018253" r="2.5"/>
+                    <desc class="value">2647</desc>
+                    <desc class="x left top">612.9557979334099</desc>
+                    <desc class="y left top">462.1916558018253</desc>
+                    <desc class="x_label">13:16:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="620.9494833524683" cy="462.10039113428945"
+                            r="2.5"/>
+                    <desc class="value">2656</desc>
+                    <desc class="x left top">620.9494833524683</desc>
+                    <desc class="y left top">462.10039113428945</desc>
+                    <desc class="x_label">13:26:42</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="628.943168771527" cy="461.9685643922932" r="2.5"/>
+                    <desc class="value">2669</desc>
+                    <desc class="x left top">628.943168771527</desc>
+                    <desc class="y left top">461.9685643922932</desc>
+                    <desc class="x_label">13:37:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="636.9368541905856" cy="461.84687816891204"
+                            r="2.5"/>
+                    <desc class="value">2681</desc>
+                    <desc class="x left top">636.9368541905856</desc>
+                    <desc class="y left top">461.84687816891204</desc>
+                    <desc class="x_label">13:47:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="644.9305396096441" cy="461.7150514269158" r="2.5"/>
+                    <desc class="value">2694</desc>
+                    <desc class="x left top">644.9305396096441</desc>
+                    <desc class="y left top">461.7150514269158</desc>
+                    <desc class="x_label">13:58:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="652.9242250287026" cy="461.50210053599886"
+                            r="2.5"/>
+                    <desc class="value">2715</desc>
+                    <desc class="x left top">652.9242250287026</desc>
+                    <desc class="y left top">461.50210053599886</desc>
+                    <desc class="x_label">14:08:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="660.9179104477611" cy="461.43111690569316"
+                            r="2.5"/>
+                    <desc class="value">2722</desc>
+                    <desc class="x left top">660.9179104477611</desc>
+                    <desc class="y left top">461.43111690569316</desc>
+                    <desc class="x_label">14:19:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="668.9115958668198" cy="460.873388381863" r="2.5"/>
+                    <desc class="value">2777</desc>
+                    <desc class="x left top">668.9115958668198</desc>
+                    <desc class="y left top">460.873388381863</desc>
+                    <desc class="x_label">14:30:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="676.9052812858782" cy="460.3663624511082" r="2.5"/>
+                    <desc class="value">2827</desc>
+                    <desc class="x left top">676.9052812858782</desc>
+                    <desc class="y left top">460.3663624511082</desc>
+                    <desc class="x_label">14:40:35</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="684.8989667049368" cy="460.16355207880633"
+                            r="2.5"/>
+                    <desc class="value">2847</desc>
+                    <desc class="x left top">684.8989667049368</desc>
+                    <desc class="y left top">460.16355207880633</desc>
+                    <desc class="x_label">14:51:08</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="692.8926521239954" cy="460.1432710415761" r="2.5"/>
+                    <desc class="value">2849</desc>
+                    <desc class="x left top">692.8926521239954</desc>
+                    <desc class="y left top">460.1432710415761</desc>
+                    <desc class="x_label">15:01:41</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="700.8863375430541" cy="460.1229900043459" r="2.5"/>
+                    <desc class="value">2851</desc>
+                    <desc class="x left top">700.8863375430541</desc>
+                    <desc class="y left top">460.1229900043459</desc>
+                    <desc class="x_label">15:12:15</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="708.8800229621124" cy="460.0317253368101" r="2.5"/>
+                    <desc class="value">2860</desc>
+                    <desc class="x left top">708.8800229621124</desc>
+                    <desc class="y left top">460.0317253368101</desc>
+                    <desc class="x_label">15:22:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="716.873708381171" cy="459.93032015065916" r="2.5"/>
+                    <desc class="value">2870</desc>
+                    <desc class="x left top">716.873708381171</desc>
+                    <desc class="y left top">459.93032015065916</desc>
+                    <desc class="x_label">15:33:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="724.8673938002296" cy="459.92017963204404"
+                            r="2.5"/>
+                    <desc class="value">2871</desc>
+                    <desc class="x left top">724.8673938002296</desc>
+                    <desc class="y left top">459.92017963204404</desc>
+                    <desc class="x_label">15:43:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="732.8610792192883" cy="459.9100391134289" r="2.5"/>
+                    <desc class="value">2872</desc>
+                    <desc class="x left top">732.8610792192883</desc>
+                    <desc class="y left top">459.9100391134289</desc>
+                    <desc class="x_label">15:54:32</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="740.8547646383468" cy="459.87961755758363"
+                            r="2.5"/>
+                    <desc class="value">2875</desc>
+                    <desc class="x left top">740.8547646383468</desc>
+                    <desc class="y left top">459.87961755758363</desc>
+                    <desc class="x_label">16:05:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="748.8484500574052" cy="459.25090540344775"
+                            r="2.5"/>
+                    <desc class="value">2937</desc>
+                    <desc class="x left top">748.8484500574052</desc>
+                    <desc class="y left top">459.25090540344775</desc>
+                    <desc class="x_label">16:15:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="756.8421354764638" cy="459.11907866145157"
+                            r="2.5"/>
+                    <desc class="value">2950</desc>
+                    <desc class="x left top">756.8421354764638</desc>
+                    <desc class="y left top">459.11907866145157</desc>
+                    <desc class="x_label">16:26:13</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="764.8358208955224" cy="459.0278139939157" r="2.5"/>
+                    <desc class="value">2959</desc>
+                    <desc class="x left top">764.8358208955224</desc>
+                    <desc class="y left top">459.0278139939157</desc>
+                    <desc class="x_label">16:36:45</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="772.829506314581" cy="458.9669708822251" r="2.5"/>
+                    <desc class="value">2965</desc>
+                    <desc class="x left top">772.829506314581</desc>
+                    <desc class="y left top">458.9669708822251</desc>
+                    <desc class="x_label">16:47:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="780.8231917336395" cy="458.90612777053457"
+                            r="2.5"/>
+                    <desc class="value">2971</desc>
+                    <desc class="x left top">780.8231917336395</desc>
+                    <desc class="y left top">458.90612777053457</desc>
+                    <desc class="x_label">16:57:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="788.816877152698" cy="458.8047225843836" r="2.5"/>
+                    <desc class="value">2981</desc>
+                    <desc class="x left top">788.816877152698</desc>
+                    <desc class="y left top">458.8047225843836</desc>
+                    <desc class="x_label">17:08:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="796.8105625717566" cy="458.7033173982326" r="2.5"/>
+                    <desc class="value">2991</desc>
+                    <desc class="x left top">796.8105625717566</desc>
+                    <desc class="y left top">458.7033173982326</desc>
+                    <desc class="x_label">17:19:05</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="804.8042479908152" cy="458.6424742865421" r="2.5"/>
+                    <desc class="value">2997</desc>
+                    <desc class="x left top">804.8042479908152</desc>
+                    <desc class="y left top">458.6424742865421</desc>
+                    <desc class="x_label">17:29:37</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="812.7979334098737" cy="458.51064754454586"
+                            r="2.5"/>
+                    <desc class="value">3010</desc>
+                    <desc class="x left top">812.7979334098737</desc>
+                    <desc class="y left top">458.51064754454586</desc>
+                    <desc class="x_label">17:40:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="820.7916188289323" cy="458.3889613211647" r="2.5"/>
+                    <desc class="value">3022</desc>
+                    <desc class="x left top">820.7916188289323</desc>
+                    <desc class="y left top">458.3889613211647</desc>
+                    <desc class="x_label">17:50:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="828.7853042479907" cy="458.35853976531945"
+                            r="2.5"/>
+                    <desc class="value">3025</desc>
+                    <desc class="x left top">828.7853042479907</desc>
+                    <desc class="y left top">458.35853976531945</desc>
+                    <desc class="x_label">18:01:36</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="836.7789896670494" cy="458.35853976531945"
+                            r="2.5"/>
+                    <desc class="value">3025</desc>
+                    <desc class="x left top">836.7789896670494</desc>
+                    <desc class="y left top">458.35853976531945</desc>
+                    <desc class="x_label">18:12:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="844.7726750861079" cy="458.2774156163987" r="2.5"/>
+                    <desc class="value">3033</desc>
+                    <desc class="x left top">844.7726750861079</desc>
+                    <desc class="y left top">458.2774156163987</desc>
+                    <desc class="x_label">18:22:48</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="852.7663605051664" cy="458.1557293930175" r="2.5"/>
+                    <desc class="value">3045</desc>
+                    <desc class="x left top">852.7663605051664</desc>
+                    <desc class="y left top">458.1557293930175</desc>
+                    <desc class="x_label">18:33:20</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="860.7600459242251" cy="458.1253078371722" r="2.5"/>
+                    <desc class="value">3048</desc>
+                    <desc class="x left top">860.7600459242251</desc>
+                    <desc class="y left top">458.1253078371722</desc>
+                    <desc class="x_label">18:43:53</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="868.7537313432836" cy="458.0036216137911" r="2.5"/>
+                    <desc class="value">3060</desc>
+                    <desc class="x left top">868.7537313432836</desc>
+                    <desc class="y left top">458.0036216137911</desc>
+                    <desc class="x_label">18:54:26</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="876.7474167623421" cy="458.0036216137911" r="2.5"/>
+                    <desc class="value">3060</desc>
+                    <desc class="x left top">876.7474167623421</desc>
+                    <desc class="y left top">458.0036216137911</desc>
+                    <desc class="x_label">19:04:57</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="884.7411021814006" cy="457.4864551644213" r="2.5"/>
+                    <desc class="value">3111</desc>
+                    <desc class="x left top">884.7411021814006</desc>
+                    <desc class="y left top">457.4864551644213</desc>
+                    <desc class="x_label">19:15:36</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="892.7347876004592" cy="457.17209908735333"
+                            r="2.5"/>
+                    <desc class="value">3142</desc>
+                    <desc class="x left top">892.7347876004592</desc>
+                    <desc class="y left top">457.17209908735333</desc>
+                    <desc class="x_label">19:26:09</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="900.7284730195179" cy="456.96928871505145"
+                            r="2.5"/>
+                    <desc class="value">3162</desc>
+                    <desc class="x left top">900.7284730195179</desc>
+                    <desc class="y left top">456.96928871505145</desc>
+                    <desc class="x_label">19:36:43</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="908.7221584385763" cy="456.50282485875704"
+                            r="2.5"/>
+                    <desc class="value">3208</desc>
+                    <desc class="x left top">908.7221584385763</desc>
+                    <desc class="y left top">456.50282485875704</desc>
+                    <desc class="x_label">19:47:16</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="916.7158438576348" cy="456.36085759814574"
+                            r="2.5"/>
+                    <desc class="value">3222</desc>
+                    <desc class="x left top">916.7158438576348</desc>
+                    <desc class="y left top">456.36085759814574</desc>
+                    <desc class="x_label">19:57:49</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="924.7095292766934" cy="455.9856584093872" r="2.5"/>
+                    <desc class="value">3259</desc>
+                    <desc class="x left top">924.7095292766934</desc>
+                    <desc class="y left top">455.9856584093872</desc>
+                    <desc class="x_label">20:08:23</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="932.7032146957521" cy="455.76256699985515"
+                            r="2.5"/>
+                    <desc class="value">3281</desc>
+                    <desc class="x left top">932.7032146957521</desc>
+                    <desc class="y left top">455.76256699985515</desc>
+                    <desc class="x_label">20:18:55</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="940.6969001148105" cy="455.50905403447774"
+                            r="2.5"/>
+                    <desc class="value">3306</desc>
+                    <desc class="x left top">940.6969001148105</desc>
+                    <desc class="y left top">455.50905403447774</desc>
+                    <desc class="x_label">20:29:28</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="948.690585533869" cy="455.1642764015645" r="2.5"/>
+                    <desc class="value">3340</desc>
+                    <desc class="x left top">948.690585533869</desc>
+                    <desc class="y left top">455.1642764015645</desc>
+                    <desc class="x_label">20:40:01</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="956.6842709529276" cy="455.0223091409532" r="2.5"/>
+                    <desc class="value">3354</desc>
+                    <desc class="x left top">956.6842709529276</desc>
+                    <desc class="y left top">455.0223091409532</desc>
+                    <desc class="x_label">20:50:33</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="964.6779563719863" cy="454.91076343618715"
+                            r="2.5"/>
+                    <desc class="value">3365</desc>
+                    <desc class="x left top">964.6779563719863</desc>
+                    <desc class="y left top">454.91076343618715</desc>
+                    <desc class="x_label">21:01:06</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="972.6716417910447" cy="454.9006229175721" r="2.5"/>
+                    <desc class="value">3366</desc>
+                    <desc class="x left top">972.6716417910447</desc>
+                    <desc class="y left top">454.9006229175721</desc>
+                    <desc class="x_label">21:11:40</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="980.6653272101033" cy="454.81949876865133"
+                            r="2.5"/>
+                    <desc class="value">3374</desc>
+                    <desc class="x left top">980.6653272101033</desc>
+                    <desc class="y left top">454.81949876865133</desc>
+                    <desc class="x_label">21:22:11</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="988.659012629162" cy="454.54570476604374" r="2.5"/>
+                    <desc class="value">3401</desc>
+                    <desc class="x left top">988.659012629162</desc>
+                    <desc class="y left top">454.54570476604374</desc>
+                    <desc class="x_label">21:32:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="996.6526980482205" cy="454.4341590612777" r="2.5"/>
+                    <desc class="value">3412</desc>
+                    <desc class="x left top">996.6526980482205</desc>
+                    <desc class="y left top">454.4341590612777</desc>
+                    <desc class="x_label">21:43:18</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1004.6463834672788" cy="454.2212081703607"
+                            r="2.5"/>
+                    <desc class="value">3433</desc>
+                    <desc class="x left top">1004.6463834672788</desc>
+                    <desc class="y left top">454.2212081703607</desc>
+                    <desc class="x_label">21:53:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1012.6400688863375" cy="454.09952194697956"
+                            r="2.5"/>
+                    <desc class="value">3445</desc>
+                    <desc class="x left top">1012.6400688863375</desc>
+                    <desc class="y left top">454.09952194697956</desc>
+                    <desc class="x_label">22:04:24</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1020.6337543053962" cy="453.93727364913804"
+                            r="2.5"/>
+                    <desc class="value">3461</desc>
+                    <desc class="x left top">1020.6337543053962</desc>
+                    <desc class="y left top">453.93727364913804</desc>
+                    <desc class="x_label">22:15:00</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1028.6274397244547" cy="453.8967115746777"
+                            r="2.5"/>
+                    <desc class="value">3465</desc>
+                    <desc class="x left top">1028.6274397244547</desc>
+                    <desc class="y left top">453.8967115746777</desc>
+                    <desc class="x_label">22:25:34</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1036.6211251435132" cy="453.85614950021727"
+                            r="2.5"/>
+                    <desc class="value">3469</desc>
+                    <desc class="x left top">1036.6211251435132</desc>
+                    <desc class="y left top">453.85614950021727</desc>
+                    <desc class="x_label">22:36:07</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1044.6148105625716" cy="453.8358684629871"
+                            r="2.5"/>
+                    <desc class="value">3471</desc>
+                    <desc class="x left top">1044.6148105625716</desc>
+                    <desc class="y left top">453.8358684629871</desc>
+                    <desc class="x_label">22:46:39</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1052.6084959816303" cy="453.6634796465305"
+                            r="2.5"/>
+                    <desc class="value">3488</desc>
+                    <desc class="x left top">1052.6084959816303</desc>
+                    <desc class="y left top">453.6634796465305</desc>
+                    <desc class="x_label">22:57:12</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1060.6021814006888" cy="453.6533391279154"
+                            r="2.5"/>
+                    <desc class="value">3489</desc>
+                    <desc class="x left top">1060.6021814006888</desc>
+                    <desc class="y left top">453.6533391279154</desc>
+                    <desc class="x_label">23:07:44</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1068.5958668197475" cy="453.6026365348399"
+                            r="2.5"/>
+                    <desc class="value">3494</desc>
+                    <desc class="x left top">1068.5958668197475</desc>
+                    <desc class="y left top">453.6026365348399</desc>
+                    <desc class="x_label">23:18:17</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1076.589552238806" cy="453.2984209763871" r="2.5"/>
+                    <desc class="value">3524</desc>
+                    <desc class="x left top">1076.589552238806</desc>
+                    <desc class="y left top">453.2984209763871</desc>
+                    <desc class="x_label">23:28:50</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1084.5832376578644" cy="453.1767347530059"
+                            r="2.5"/>
+                    <desc class="value">3536</desc>
+                    <desc class="x left top">1084.5832376578644</desc>
+                    <desc class="y left top">453.1767347530059</desc>
+                    <desc class="x_label">23:39:22</desc>
+                </g>
+                <g class="dots">
+                    <circle class="dot reactive tooltip-trigger" cx="1092.576923076923" cy="452.8420976387078" r="2.5"/>
+                    <desc class="value">3569</desc>
+                    <desc class="x left top">1092.576923076923</desc>
+                    <desc class="y left top">452.8420976387078</desc>
+                    <desc class="x_label">23:49:54</desc>
+                </g>
+            </g>
+        </g>
+        <g class="plot text-overlay" transform="translate(166, 46)">
+            <g class="series serie-0 color-0"/>
+            <g class="series serie-1 color-1"/>
+        </g>
+        <g class="plot tooltip-overlay" transform="translate(166, 46)">
+            <g class="tooltip" style="opacity: 0" transform="translate(0 0)">
+                <rect class="tooltip-box" height="0" rx="0" ry="0" width="0"/>
+                <g class="text"/>
+            </g>
+        </g>
+        <g class="legends" transform="translate(10, 56)">
+            <g class="legend reactive activate-serie" id="activate-serie-0">
+                <rect class="color-0 reactive" height="12" width="12" x="0.0" y="1.0"/>
+                <text x="17.0" y="11.2">南阳理工学院官方微信</text>
+            </g>
+            <g class="legend reactive activate-serie" id="activate-serie-1">
+                <rect class="color-1 reactive" height="12" width="12" x="0.0" y="22.0"/>
+                <text x="17.0" y="32.2">南阳理工学院官方微博</text>
+            </g>
+        </g>
+        <g class="legends" transform="translate(1290, 56)"/>
+    </g>
+</svg>
