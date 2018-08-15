@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="学生处python_env">
+    <serverData>
+      <paths name="学生处python_env">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/pythonenv01" local="$PROJECT_DIR$/../python_env" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
