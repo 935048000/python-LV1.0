@@ -1,3 +1,9 @@
+"""
+爬取CSDN博客的总访问量（总阅读量）
+
+
+"""
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from datetime import datetime
