@@ -59,3 +59,9 @@ web：服务器和客户端编程（C/S）
 
 
 translate:翻译API（百度 and 有道）
+
+
+debug:程序调试案例
+
+
+exception:python异常处理
