@@ -1,6 +1,7 @@
 # python-LV1.0
-pthon 程序集版本 1.0
+pthon 程序集版本 2.0
 
+这是一个python程序用例仓库，仓库存放各类的python高级用法。
 
 ## 目录介绍
 
